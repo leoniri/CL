@@ -1,0 +1,5236 @@
+lab:
+  description: ''
+  notes: ''
+  title: SR-MPLS Lab
+  version: 0.2.0
+links:
+  - id: l0
+    n1: n1
+    n2: n0
+    i1: i0
+    i2: i0
+    label: alpine-0-eth0<->ext-conn-0-port
+  - id: l1
+    n1: n2
+    n2: n1
+    i1: i0
+    i2: i1
+    label: unmanaged-switch-0-port0<->alpine-0-eth1
+  - id: l2
+    n1: n13
+    n2: n16
+    i1: i2
+    i2: i1
+    label: PE_M1_1_XR-GigabitEthernet0/0/0/0<->P_M1_3_XE-GigabitEthernet1
+  - id: l3
+    n1: n15
+    n2: n14
+    i1: i1
+    i2: i2
+    label: PE_M1_2_XE-GigabitEthernet1<->P_M1_4_XR-GigabitEthernet0/0/0/0
+  - id: l4
+    n1: n13
+    n2: n14
+    i1: i3
+    i2: i3
+    label: PE_M1_1_XR-GigabitEthernet0/0/0/1<->P_M1_4_XR-GigabitEthernet0/0/0/1
+  - id: l5
+    n1: n15
+    n2: n16
+    i1: i2
+    i2: i2
+    label: PE_M1_2_XE-GigabitEthernet2<->P_M1_3_XE-GigabitEthernet2
+  - id: l6
+    n1: n16
+    n2: n24
+    i1: i3
+    i2: i2
+    label: P_M1_3_XE-GigabitEthernet3<->RR_M1_254_XR-GigabitEthernet0/0/0/0
+  - id: l7
+    n1: n14
+    n2: n24
+    i1: i4
+    i2: i3
+    label: P_M1_4_XR-GigabitEthernet0/0/0/2<->RR_M1_254_XR-GigabitEthernet0/0/0/1
+  - id: l8
+    n1: n16
+    n2: n6
+    i1: i4
+    i2: i2
+    label: P_M1_3_XE-GigabitEthernet4<->ABR_C1_5_XR-GigabitEthernet0/0/0/0
+  - id: l9
+    n1: n16
+    n2: n17
+    i1: i5
+    i2: i1
+    label: P_M1_3_XE-GigabitEthernet5<->ABR_M1_6_XE-GigabitEthernet1
+  - id: l10
+    n1: n14
+    n2: n19
+    i1: i5
+    i2: i2
+    label: P_M1_4_XR-GigabitEthernet0/0/0/3<->ASBR_M1_5_XR-GigabitEthernet0/0/0/0
+  - id: l11
+    n1: n14
+    n2: n18
+    i1: i6
+    i2: i1
+    label: P_M1_4_XR-GigabitEthernet0/0/0/4<->ASBR_M1_6_XE-GigabitEthernet1
+  - id: l12
+    n1: n6
+    n2: n17
+    i1: i3
+    i2: i2
+    label: ABR_C1_5_XR-GigabitEthernet0/0/0/1<->ABR_M1_6_XE-GigabitEthernet2
+  - id: l13
+    n1: n19
+    n2: n18
+    i1: i3
+    i2: i2
+    label: ASBR_M1_5_XR-GigabitEthernet0/0/0/1<->ASBR_M1_6_XE-GigabitEthernet2
+  - id: l14
+    n1: n6
+    n2: n20
+    i1: i4
+    i2: i1
+    label: ABR_C1_5_XR-GigabitEthernet0/0/0/2<->P_C1_1_XE-GigabitEthernet1
+  - id: l15
+    n1: n17
+    n2: n3
+    i1: i3
+    i2: i2
+    label: ABR_M1_6_XE-GigabitEthernet3<->P_C1_2_XR-GigabitEthernet0/0/0/0
+  - id: l16
+    n1: n19
+    n2: n25
+    i1: i4
+    i2: i1
+    label: ASBR_M1_5_XR-GigabitEthernet0/0/0/2<->ASBR_C2_2_XE-GigabitEthernet1
+  - id: l17
+    n1: n18
+    n2: n8
+    i1: i3
+    i2: i2
+    label: ASBR_M1_6_XE-GigabitEthernet3<->ASBR_C2_3_XR-GigabitEthernet0/0/0/0
+  - id: l18
+    n1: n25
+    n2: n7
+    i1: i2
+    i2: i2
+    label: ASBR_C2_2_XE-GigabitEthernet2<->P_C2_1_XR-GigabitEthernet0/0/0/0
+  - id: l19
+    n1: n8
+    n2: n7
+    i1: i3
+    i2: i3
+    label: ASBR_C2_3_XR-GigabitEthernet0/0/0/1<->P_C2_1_XR-GigabitEthernet0/0/0/1
+  - id: l20
+    n1: n9
+    n2: n7
+    i1: i2
+    i2: i4
+    label: ASBR_C2_4_XR-GigabitEthernet0/0/0/0<->P_C2_1_XR-GigabitEthernet0/0/0/2
+  - id: l21
+    n1: n26
+    n2: n7
+    i1: i1
+    i2: i5
+    label: ASBR_C2_5_XE-GigabitEthernet1<->P_C2_1_XR-GigabitEthernet0/0/0/3
+  - id: l22
+    n1: n27
+    n2: n7
+    i1: i2
+    i2: i6
+    label: RR_C2_254_XR-GigabitEthernet0/0/0/0<->P_C2_1_XR-GigabitEthernet0/0/0/4
+  - id: l23
+    n1: n20
+    n2: n3
+    i1: i2
+    i2: i3
+    label: P_C1_1_XE-GigabitEthernet2<->P_C1_2_XR-GigabitEthernet0/0/0/1
+  - id: l24
+    n1: n12
+    n2: n5
+    i1: i2
+    i2: i2
+    label: PE_M2_1_XR-GigabitEthernet0/0/0/0<->ABR_C1_7_XR-GigabitEthernet0/0/0/0
+  - id: l25
+    n1: n30
+    n2: n22
+    i1: i1
+    i2: i1
+    label: PE_M2_2_XE-GigabitEthernet1<->ABR_C1_8_XE-GigabitEthernet1
+  - id: l26
+    n1: n12
+    n2: n22
+    i1: i3
+    i2: i2
+    label: PE_M2_1_XR-GigabitEthernet0/0/0/1<->ABR_C1_8_XE-GigabitEthernet2
+  - id: l27
+    n1: n30
+    n2: n5
+    i1: i2
+    i2: i3
+    label: PE_M2_2_XE-GigabitEthernet2<->ABR_C1_7_XR-GigabitEthernet0/0/0/1
+  - id: l28
+    n1: n5
+    n2: n29
+    i1: i4
+    i2: i1
+    label: ABR_C1_7_XR-GigabitEthernet0/0/0/2<->RR_M2_254_XE-GigabitEthernet1
+  - id: l29
+    n1: n22
+    n2: n29
+    i1: i3
+    i2: i2
+    label: ABR_C1_8_XE-GigabitEthernet3<->RR_M2_254_XE-GigabitEthernet2
+  - id: l30
+    n1: n22
+    n2: n5
+    i1: i4
+    i2: i5
+    label: ABR_C1_8_XE-GigabitEthernet4<->ABR_C1_7_XR-GigabitEthernet0/0/0/3
+  - id: l31
+    n1: n5
+    n2: n4
+    i1: i6
+    i2: i2
+    label: ABR_C1_7_XR-GigabitEthernet0/0/0/4<->P_C1_3_XR-GigabitEthernet0/0/0/0
+  - id: l32
+    n1: n22
+    n2: n21
+    i1: i5
+    i2: i1
+    label: ABR_C1_8_XE-GigabitEthernet5<->P_C1_4_XE-GigabitEthernet1
+  - id: l33
+    n1: n4
+    n2: n21
+    i1: i3
+    i2: i2
+    label: P_C1_3_XR-GigabitEthernet0/0/0/1<->P_C1_4_XE-GigabitEthernet2
+  - id: l34
+    n1: n20
+    n2: n4
+    i1: i3
+    i2: i4
+    label: P_C1_1_XE-GigabitEthernet3<->P_C1_3_XR-GigabitEthernet0/0/0/2
+  - id: l35
+    n1: n3
+    n2: n21
+    i1: i4
+    i2: i3
+    label: P_C1_2_XR-GigabitEthernet0/0/0/2<->P_C1_4_XE-GigabitEthernet3
+  - id: l36
+    n1: n20
+    n2: n21
+    i1: i4
+    i2: i4
+    label: P_C1_1_XE-GigabitEthernet4<->P_C1_4_XE-GigabitEthernet4
+  - id: l37
+    n1: n3
+    n2: n4
+    i1: i5
+    i2: i5
+    label: P_C1_2_XR-GigabitEthernet0/0/0/3<->P_C1_3_XR-GigabitEthernet0/0/0/3
+  - id: l38
+    n1: n20
+    n2: n23
+    i1: i5
+    i2: i1
+    label: P_C1_1_XE-GigabitEthernet5<->RR_C1_254_XE-GigabitEthernet1
+  - id: l39
+    n1: n23
+    n2: n4
+    i1: i2
+    i2: i6
+    label: RR_C1_254_XE-GigabitEthernet2<->P_C1_3_XR-GigabitEthernet0/0/0/4
+  - id: l40
+    n1: n11
+    n2: n28
+    i1: i2
+    i2: i1
+    label: PE_M3_1_XR-GigabitEthernet0/0/0/0<->ASBR_M3_2_XE-GigabitEthernet1
+  - id: l41
+    n1: n11
+    n2: n10
+    i1: i3
+    i2: i2
+    label: PE_M3_1_XR-GigabitEthernet0/0/0/1<->ASBR_M3_3_XR-GigabitEthernet0/0/0/0
+  - id: l42
+    n1: n28
+    n2: n10
+    i1: i2
+    i2: i3
+    label: ASBR_M3_2_XE-GigabitEthernet2<->ASBR_M3_3_XR-GigabitEthernet0/0/0/1
+  - id: l43
+    n1: n9
+    n2: n28
+    i1: i3
+    i2: i3
+    label: ASBR_C2_4_XR-GigabitEthernet0/0/0/1<->ASBR_M3_2_XE-GigabitEthernet3
+  - id: l44
+    n1: n26
+    n2: n10
+    i1: i2
+    i2: i4
+    label: ASBR_C2_5_XE-GigabitEthernet2<->ASBR_M3_3_XR-GigabitEthernet0/0/0/2
+  - id: l45
+    n1: n13
+    n2: n2
+    i1: i1
+    i2: i1
+    label: PE_M1_1_XR-MgmtEth0/0/CPU0/0<->unmanaged-switch-0-port1
+  - id: l46
+    n1: n15
+    n2: n2
+    i1: i26
+    i2: i2
+    label: PE_M1_2_XE-GigabitEthernet26<->unmanaged-switch-0-port2
+  - id: l47
+    n1: n16
+    n2: n2
+    i1: i26
+    i2: i3
+    label: P_M1_3_XE-GigabitEthernet26<->unmanaged-switch-0-port3
+  - id: l48
+    n1: n24
+    n2: n2
+    i1: i1
+    i2: i4
+    label: RR_M1_254_XR-MgmtEth0/0/CPU0/0<->unmanaged-switch-0-port4
+  - id: l49
+    n1: n14
+    n2: n2
+    i1: i1
+    i2: i5
+    label: P_M1_4_XR-MgmtEth0/0/CPU0/0<->unmanaged-switch-0-port5
+  - id: l50
+    n1: n6
+    n2: n2
+    i1: i1
+    i2: i6
+    label: ABR_C1_5_XR-MgmtEth0/0/CPU0/0<->unmanaged-switch-0-port6
+  - id: l51
+    n1: n17
+    n2: n2
+    i1: i26
+    i2: i7
+    label: ABR_M1_6_XE-GigabitEthernet26<->unmanaged-switch-0-port7
+  - id: l52
+    n1: n19
+    n2: n2
+    i1: i1
+    i2: i8
+    label: ASBR_M1_5_XR-MgmtEth0/0/CPU0/0<->unmanaged-switch-0-port8
+  - id: l53
+    n1: n18
+    n2: n2
+    i1: i26
+    i2: i9
+    label: ASBR_M1_6_XE-GigabitEthernet26<->unmanaged-switch-0-port9
+  - id: l54
+    n1: n20
+    n2: n2
+    i1: i26
+    i2: i10
+    label: P_C1_1_XE-GigabitEthernet26<->unmanaged-switch-0-port10
+  - id: l55
+    n1: n3
+    n2: n2
+    i1: i1
+    i2: i11
+    label: P_C1_2_XR-MgmtEth0/0/CPU0/0<->unmanaged-switch-0-port11
+  - id: l56
+    n1: n25
+    n2: n2
+    i1: i26
+    i2: i12
+    label: ASBR_C2_2_XE-GigabitEthernet26<->unmanaged-switch-0-port12
+  - id: l57
+    n1: n8
+    n2: n2
+    i1: i1
+    i2: i13
+    label: ASBR_C2_3_XR-MgmtEth0/0/CPU0/0<->unmanaged-switch-0-port13
+  - id: l58
+    n1: n23
+    n2: n2
+    i1: i26
+    i2: i14
+    label: RR_C1_254_XE-GigabitEthernet26<->unmanaged-switch-0-port14
+  - id: l59
+    n1: n4
+    n2: n2
+    i1: i1
+    i2: i15
+    label: P_C1_3_XR-MgmtEth0/0/CPU0/0<->unmanaged-switch-0-port15
+  - id: l60
+    n1: n21
+    n2: n2
+    i1: i26
+    i2: i16
+    label: P_C1_4_XE-GigabitEthernet26<->unmanaged-switch-0-port16
+  - id: l61
+    n1: n27
+    n2: n2
+    i1: i1
+    i2: i17
+    label: RR_C2_254_XR-MgmtEth0/0/CPU0/0<->unmanaged-switch-0-port17
+  - id: l62
+    n1: n7
+    n2: n2
+    i1: i1
+    i2: i18
+    label: P_C2_1_XR-MgmtEth0/0/CPU0/0<->unmanaged-switch-0-port18
+  - id: l63
+    n1: n5
+    n2: n2
+    i1: i1
+    i2: i19
+    label: ABR_C1_7_XR-MgmtEth0/0/CPU0/0<->unmanaged-switch-0-port19
+  - id: l64
+    n1: n22
+    n2: n2
+    i1: i26
+    i2: i20
+    label: ABR_C1_8_XE-GigabitEthernet26<->unmanaged-switch-0-port20
+  - id: l65
+    n1: n9
+    n2: n2
+    i1: i1
+    i2: i21
+    label: ASBR_C2_4_XR-MgmtEth0/0/CPU0/0<->unmanaged-switch-0-port21
+  - id: l66
+    n1: n26
+    n2: n2
+    i1: i26
+    i2: i22
+    label: ASBR_C2_5_XE-GigabitEthernet26<->unmanaged-switch-0-port22
+  - id: l67
+    n1: n29
+    n2: n2
+    i1: i26
+    i2: i23
+    label: RR_M2_254_XE-GigabitEthernet26<->unmanaged-switch-0-port23
+  - id: l68
+    n1: n28
+    n2: n2
+    i1: i26
+    i2: i24
+    label: ASBR_M3_2_XE-GigabitEthernet26<->unmanaged-switch-0-port24
+  - id: l69
+    n1: n10
+    n2: n2
+    i1: i1
+    i2: i25
+    label: ASBR_M3_3_XR-MgmtEth0/0/CPU0/0<->unmanaged-switch-0-port25
+  - id: l70
+    n1: n12
+    n2: n2
+    i1: i1
+    i2: i26
+    label: PE_M2_1_XR-MgmtEth0/0/CPU0/0<->unmanaged-switch-0-port26
+  - id: l71
+    n1: n30
+    n2: n2
+    i1: i26
+    i2: i27
+    label: PE_M2_2_XE-GigabitEthernet26<->unmanaged-switch-0-port27
+  - id: l72
+    n1: n11
+    n2: n2
+    i1: i1
+    i2: i28
+    label: PE_M3_1_XR-MgmtEth0/0/CPU0/0<->unmanaged-switch-0-port28
+nodes:
+  - boot_disk_size: null
+    configuration: bridge0
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n0
+    image_definition: null
+    label: ext-con-br0
+    node_definition: external_connector
+    ram: null
+    tags: []
+    x: -640
+    y: 40
+    interfaces:
+      - id: i0
+        label: port
+        slot: 0
+        type: physical
+  - boot_disk_size: null
+    configuration: |-
+      # this is a shell script which will be sourced at boot
+      hostname inserthostname-here
+      # configurable user account
+      USERNAME=cisco
+      PASSWORD=cisco
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n1
+    image_definition: null
+    label: alpine-0
+    node_definition: alpine
+    ram: null
+    tags: []
+    x: -480
+    y: 40
+    interfaces:
+      - id: i0
+        label: eth0
+        slot: 0
+        type: physical
+      - id: i1
+        label: eth1
+        slot: 1
+        type: physical
+  - boot_disk_size: null
+    configuration: ums-0b96017b-43
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n2
+    image_definition: null
+    label: unmanaged-switch-0
+    node_definition: unmanaged_switch
+    ram: null
+    tags: []
+    x: 0
+    y: -280
+    interfaces:
+      - id: i0
+        label: port0
+        slot: 0
+        type: physical
+      - id: i1
+        label: port1
+        slot: 1
+        type: physical
+      - id: i2
+        label: port2
+        slot: 2
+        type: physical
+      - id: i3
+        label: port3
+        slot: 3
+        type: physical
+      - id: i4
+        label: port4
+        slot: 4
+        type: physical
+      - id: i5
+        label: port5
+        slot: 5
+        type: physical
+      - id: i6
+        label: port6
+        slot: 6
+        type: physical
+      - id: i7
+        label: port7
+        slot: 7
+        type: physical
+      - id: i8
+        label: port8
+        slot: 8
+        type: physical
+      - id: i9
+        label: port9
+        slot: 9
+        type: physical
+      - id: i10
+        label: port10
+        slot: 10
+        type: physical
+      - id: i11
+        label: port11
+        slot: 11
+        type: physical
+      - id: i12
+        label: port12
+        slot: 12
+        type: physical
+      - id: i13
+        label: port13
+        slot: 13
+        type: physical
+      - id: i14
+        label: port14
+        slot: 14
+        type: physical
+      - id: i15
+        label: port15
+        slot: 15
+        type: physical
+      - id: i16
+        label: port16
+        slot: 16
+        type: physical
+      - id: i17
+        label: port17
+        slot: 17
+        type: physical
+      - id: i18
+        label: port18
+        slot: 18
+        type: physical
+      - id: i19
+        label: port19
+        slot: 19
+        type: physical
+      - id: i20
+        label: port20
+        slot: 20
+        type: physical
+      - id: i21
+        label: port21
+        slot: 21
+        type: physical
+      - id: i22
+        label: port22
+        slot: 22
+        type: physical
+      - id: i23
+        label: port23
+        slot: 23
+        type: physical
+      - id: i24
+        label: port24
+        slot: 24
+        type: physical
+      - id: i25
+        label: port25
+        slot: 25
+        type: physical
+      - id: i26
+        label: port26
+        slot: 26
+        type: physical
+      - id: i27
+        label: port27
+        slot: 27
+        type: physical
+      - id: i28
+        label: port28
+        slot: 28
+        type: physical
+      - id: i29
+        label: port29
+        slot: 29
+        type: physical
+      - id: i30
+        label: port30
+        slot: 30
+        type: physical
+      - id: i31
+        label: port31
+        slot: 31
+        type: physical
+  - boot_disk_size: null
+    configuration: |2-
+
+      Mon Apr 24 05:01:17.784 UTC
+      Building configuration...
+      !! IOS XR Configuration 6.6.3
+      !! Last configuration change at Mon Apr 24 05:01:15 2023 by cisco
+      !
+      hostname P_C1_2_XR
+      logging console disable
+      vrf MGMT
+       address-family ipv4 unicast
+       !
+      !
+      line console
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      line default
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      interface Loopback0
+       ipv4 address 10.0.1.2 255.255.255.255
+      !
+      interface MgmtEth0/0/CPU0/0
+       vrf MGMT
+       ipv4 address 192.168.1.12 255.255.255.0
+      !
+      interface GigabitEthernet0/0/0/0
+       ipv4 address 192.168.1.8 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/1
+       ipv4 address 192.168.1.3 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/2
+       ipv4 address 192.168.1.31 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/3
+       ipv4 address 192.168.1.32 255.255.255.254
+      !
+      router static
+       vrf MGMT
+        address-family ipv4 unicast
+         0.0.0.0/0 192.168.1.254
+        !
+       !
+      !
+      router isis CORE1
+       net 49.0001.0001.0000.0002.00
+       address-family ipv4 unicast
+        metric-style wide
+       !
+       interface Loopback0
+        passive
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/0
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/1
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/2
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/3
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+      !
+      ssh server dscp 30
+      ssh server logging
+      ssh server rate-limit 100
+      ssh server capability netconf-xml
+      ssh server rekey-volume 4095
+      ssh server session-limit 100
+      ssh server v2
+      ssh server vrf MGMT
+      end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n3
+    image_definition: XRv 663
+    label: P_C1_2_XR
+    node_definition: iosxrv
+    ram: null
+    tags: []
+    x: -80
+    y: 320
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: MgmtEth0/0/CPU0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/0/0/0
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/0/0/1
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/0/0/2
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet0/0/0/3
+        slot: 4
+        type: physical
+  - boot_disk_size: null
+    configuration: |2-
+
+      Mon Apr 24 05:01:43.981 UTC
+      Building configuration...
+      !! IOS XR Configuration 6.6.3
+      !! Last configuration change at Mon Apr 24 05:01:42 2023 by cisco
+      !
+      hostname P_C1_3_XR
+      logging console disable
+      vrf MGMT
+       address-family ipv4 unicast
+       !
+      !
+      line console
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      line default
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      interface Loopback0
+       ipv4 address 10.0.1.3 255.255.255.255
+      !
+      interface MgmtEth0/0/CPU0/0
+       vrf MGMT
+       ipv4 address 192.168.1.13 255.255.255.0
+      !
+      interface GigabitEthernet0/0/0/0
+       ipv4 address 192.168.1.38 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/1
+       ipv4 address 192.168.1.34 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/2
+       ipv4 address 192.168.1.5 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/3
+       ipv4 address 192.168.1.33 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/4
+       ipv4 address 192.168.1.42 255.255.255.254
+      !
+      router static
+       vrf MGMT
+        address-family ipv4 unicast
+         0.0.0.0/0 192.168.1.254
+        !
+       !
+      !
+      router isis CORE1
+       is-type level-2-only
+       net 49.0001.0001.0000.0003.00
+       address-family ipv4 unicast
+        metric-style wide
+       !
+       interface Loopback0
+        passive
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/0
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/1
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/2
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/3
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/4
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+      !
+      ssh server dscp 30
+      ssh server logging
+      ssh server rate-limit 100
+      ssh server capability netconf-xml
+      ssh server rekey-volume 4095
+      ssh server session-limit 100
+      ssh server v2
+      ssh server vrf MGMT
+      end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n4
+    image_definition: XRv 663
+    label: P_C1_3_XR
+    node_definition: iosxrv
+    ram: null
+    tags: []
+    x: 80
+    y: 160
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: MgmtEth0/0/CPU0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/0/0/0
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/0/0/1
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/0/0/2
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet0/0/0/3
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet0/0/0/4
+        slot: 5
+        type: physical
+  - boot_disk_size: null
+    configuration: |2-
+
+      Mon Apr 24 05:02:06.897 UTC
+      Building configuration...
+      !! IOS XR Configuration 6.6.3
+      !! Last configuration change at Mon Apr 24 05:02:05 2023 by cisco
+      !
+      hostname ABR_C1_7_XR
+      logging console disable
+      vrf MGMT
+       address-family ipv4 unicast
+       !
+      !
+      line console
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      line default
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      interface Loopback0
+       ipv4 address 10.0.1.7 255.255.255.255
+      !
+      interface MgmtEth0/0/CPU0/0
+       vrf MGMT
+       ipv4 address 192.168.1.17 255.255.255.0
+      !
+      interface GigabitEthernet0/0/0/0
+       ipv4 address 192.168.4.0 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/1
+       ipv4 address 192.168.4.6 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/2
+       ipv4 address 192.168.4.40 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/3
+       shutdown
+      !
+      interface GigabitEthernet0/0/0/4
+       ipv4 address 192.168.1.39 255.255.255.254
+      !
+      router static
+       vrf MGMT
+        address-family ipv4 unicast
+         0.0.0.0/0 192.168.1.254
+        !
+       !
+      !
+      router isis CORE1
+       net 49.0001.0001.0000.0007.00
+       address-family ipv4 unicast
+        metric-style wide
+       !
+       interface Loopback0
+        passive
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/4
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+      !
+      router ospf METRO2
+       router-id 10.0.1.7
+       network point-to-point
+       address-family ipv4 unicast
+       area 0
+        interface Loopback0
+         passive enable
+        !
+        interface GigabitEthernet0/0/0/0
+        !
+        interface GigabitEthernet0/0/0/1
+        !
+        interface GigabitEthernet0/0/0/2
+        !
+       !
+      !
+      ssh server dscp 30
+      ssh server logging
+      ssh server rate-limit 100
+      ssh server capability netconf-xml
+      ssh server rekey-volume 4095
+      ssh server session-limit 100
+      ssh server v2
+      ssh server vrf MGMT
+      end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n5
+    image_definition: XRv 663
+    label: ABR_C1_7_XR
+    node_definition: iosxrv
+    ram: null
+    tags: []
+    x: 240
+    y: 160
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: MgmtEth0/0/CPU0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/0/0/0
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/0/0/1
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/0/0/2
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet0/0/0/3
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet0/0/0/4
+        slot: 5
+        type: physical
+  - boot_disk_size: null
+    configuration: |2-
+
+      Mon Apr 24 05:00:42.393 UTC
+      Building configuration...
+      !! IOS XR Configuration 6.6.3
+      !! Last configuration change at Mon Apr 24 05:00:40 2023 by cisco
+      !
+      hostname ABR_C1_5_XR
+      logging console disable
+      cdp
+      vrf MGMT
+       address-family ipv4 unicast
+       !
+      !
+      line console
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      line default
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      interface Loopback0
+       ipv4 address 10.0.1.5 255.255.255.255
+      !
+      interface MgmtEth0/0/CPU0/0
+       vrf MGMT
+       ipv4 address 192.168.1.15 255.255.255.0
+      !
+      interface GigabitEthernet0/0/0/0
+       ipv4 address 192.168.3.9 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/1
+       shutdown
+      !
+      interface GigabitEthernet0/0/0/2
+       cdp
+       ipv4 address 192.168.1.1 255.255.255.254
+      !
+      router static
+       vrf MGMT
+        address-family ipv4 unicast
+         0.0.0.0/0 192.168.1.254
+        !
+       !
+      !
+      router isis CORE1
+       net 49.0001.0001.0000.0005.00
+       address-family ipv4 unicast
+        metric-style wide
+       !
+       interface Loopback0
+        passive
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/2
+        point-to-point
+        hello-padding disable
+        address-family ipv4 unicast
+        !
+       !
+      !
+      router isis METRO1
+       net 49.0003.0003.0000.0007.00
+       address-family ipv4 unicast
+        metric-style wide
+       !
+       interface Loopback0
+        passive
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/0
+        point-to-point
+        hello-padding disable
+        address-family ipv4 unicast
+        !
+       !
+      !
+      ssh server dscp 30
+      ssh server logging
+      ssh server rate-limit 100
+      ssh server capability netconf-xml
+      ssh server rekey-volume 4095
+      ssh server session-limit 100
+      ssh server v2
+      ssh server vrf MGMT
+      end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n6
+    image_definition: XRv 663
+    label: ABR_C1_5_XR
+    node_definition: iosxrv
+    ram: null
+    tags: []
+    x: -240
+    y: 160
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: MgmtEth0/0/CPU0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/0/0/0
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/0/0/1
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/0/0/2
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration: |2-
+
+      Mon Apr 24 04:58:37.647 UTC
+      Building configuration...
+      !! IOS XR Configuration 6.6.3
+      !! Last configuration change at Mon Apr 24 04:58:35 2023 by cisco
+      !
+      hostname P_C2_1_XR
+      logging console disable
+      vrf MGMT
+       address-family ipv4 unicast
+       !
+      !
+      line console
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      line default
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      interface Loopback0
+       ipv4 address 10.0.2.1 255.255.255.255
+      !
+      interface MgmtEth0/0/CPU0/0
+       vrf MGMT
+       ipv4 address 192.168.1.21 255.255.255.0
+      !
+      interface GigabitEthernet0/0/0/0
+       ipv4 address 192.168.2.1 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/1
+       ipv4 address 192.168.2.3 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/2
+       ipv4 address 192.168.2.5 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/3
+       ipv4 address 192.168.2.7 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/4
+       ipv4 address 192.168.2.40 255.255.255.254
+      !
+      router static
+       vrf MGMT
+        address-family ipv4 unicast
+         0.0.0.0/0 192.168.1.254
+        !
+       !
+      !
+      router isis CORE2
+       net 49.0002.0002.0000.0001.00
+       address-family ipv4 unicast
+        metric-style wide
+       !
+       interface Loopback0
+        passive
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/0
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/1
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/2
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/3
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/4
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+      !
+      ssh server dscp 30
+      ssh server logging
+      ssh server rate-limit 100
+      ssh server capability netconf-xml
+      ssh server rekey-volume 4095
+      ssh server session-limit 100
+      ssh server v2
+      ssh server vrf MGMT
+      end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n7
+    image_definition: XRv 663
+    label: P_C2_1_XR
+    node_definition: iosxrv
+    ram: null
+    tags: []
+    x: 80
+    y: 600
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: MgmtEth0/0/CPU0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/0/0/0
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/0/0/1
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/0/0/2
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet0/0/0/3
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet0/0/0/4
+        slot: 5
+        type: physical
+  - boot_disk_size: null
+    configuration: |2-
+
+      Mon Apr 24 04:58:59.639 UTC
+      Building configuration...
+      !! IOS XR Configuration 6.6.3
+      !! Last configuration change at Mon Apr 24 04:58:58 2023 by cisco
+      !
+      hostname ASBR_C2_3_XR
+      logging console disable
+      vrf MGMT
+       address-family ipv4 unicast
+       !
+      !
+      line console
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      line default
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      interface Loopback0
+       ipv4 address 10.0.2.3 255.255.255.255
+      !
+      interface MgmtEth0/0/CPU0/0
+       vrf MGMT
+       ipv4 address 192.168.1.23 255.255.255.0
+      !
+      interface GigabitEthernet0/0/0/0
+       ipv4 address 192.168.51.1 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/1
+       ipv4 address 192.168.2.2 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/2
+       shutdown
+      !
+      router static
+       vrf MGMT
+        address-family ipv4 unicast
+         0.0.0.0/0 192.168.1.254
+        !
+       !
+      !
+      router isis CORE2
+       net 49.0002.0002.0000.0003.00
+       address-family ipv4 unicast
+        metric-style wide
+       !
+       interface Loopback0
+        passive
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/1
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+      !
+      ssh server dscp 30
+      ssh server logging
+      ssh server rate-limit 100
+      ssh server capability netconf-xml
+      ssh server rekey-volume 4095
+      ssh server session-limit 100
+      ssh server v2
+      ssh server vrf MGMT
+      end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n8
+    image_definition: XRv 663
+    label: ASBR_C2_3_XR
+    node_definition: iosxrv
+    ram: null
+    tags: []
+    x: -80
+    y: 680
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: MgmtEth0/0/CPU0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/0/0/0
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/0/0/1
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/0/0/2
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration: |2-
+
+      Mon Apr 24 04:59:14.496 UTC
+      Building configuration...
+      !! IOS XR Configuration 6.6.3
+      !! Last configuration change at Mon Apr 24 04:59:12 2023 by cisco
+      !
+      hostname ASBR_C2_4_XR
+      logging console disable
+      vrf MGMT
+       address-family ipv4 unicast
+       !
+      !
+      line console
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      line default
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      interface Loopback0
+       ipv4 address 10.0.2.4 255.255.255.255
+      !
+      interface MgmtEth0/0/CPU0/0
+       vrf MGMT
+       ipv4 address 192.168.1.24 255.255.255.0
+      !
+      interface GigabitEthernet0/0/0/0
+       ipv4 address 192.168.2.4 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/1
+       ipv4 address 192.168.60.0 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/2
+       shutdown
+      !
+      router static
+       vrf MGMT
+        address-family ipv4 unicast
+         0.0.0.0/0 192.168.1.254
+        !
+       !
+      !
+      router isis CORE2
+       net 49.0002.0002.0000.0004.00
+       address-family ipv4 unicast
+        metric-style wide
+       !
+       interface Loopback0
+        passive
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/0
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+      !
+      ssh server dscp 30
+      ssh server logging
+      ssh server rate-limit 100
+      ssh server capability netconf-xml
+      ssh server rekey-volume 4095
+      ssh server session-limit 100
+      ssh server v2
+      ssh server vrf MGMT
+      end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n9
+    image_definition: XRv 663
+    label: ASBR_C2_4_XR
+    node_definition: iosxrv
+    ram: null
+    tags: []
+    x: 240
+    y: 520
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: MgmtEth0/0/CPU0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/0/0/0
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/0/0/1
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/0/0/2
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration: |2-
+
+      Mon Apr 24 04:59:41.936 UTC
+      Building configuration...
+      !! IOS XR Configuration 6.6.3
+      !! Last configuration change at Mon Apr 24 04:59:40 2023 by cisco
+      !
+      hostname ASBR_M3_3_XR
+      logging console disable
+      vrf MGMT
+       address-family ipv4 unicast
+       !
+      !
+      line console
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      line default
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      interface Loopback0
+       ipv4 address 10.0.5.3 255.255.255.255
+      !
+      interface MgmtEth0/0/CPU0/0
+       vrf MGMT
+       ipv4 address 192.168.1.133 255.255.255.0
+      !
+      interface GigabitEthernet0/0/0/0
+       ipv4 address 192.168.5.2 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/1
+       shutdown
+      !
+      interface GigabitEthernet0/0/0/2
+       ipv4 address 192.168.61.1 255.255.255.254
+      !
+      router static
+       vrf MGMT
+        address-family ipv4 unicast
+         0.0.0.0/0 192.168.1.254
+        !
+       !
+      !
+      router isis METRO3
+       net 49.0005.0005.0000.0003.00
+       address-family ipv4 unicast
+        metric-style wide
+       !
+       interface Loopback0
+        passive
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/0
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+      !
+      ssh server dscp 30
+      ssh server logging
+      ssh server rate-limit 100
+      ssh server capability netconf-xml
+      ssh server rekey-volume 4095
+      ssh server session-limit 100
+      ssh server v2
+      ssh server vrf MGMT
+      end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n10
+    image_definition: XRv 663
+    label: ASBR_M3_3_XR
+    node_definition: iosxrv
+    ram: null
+    tags: []
+    x: 400
+    y: 680
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: MgmtEth0/0/CPU0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/0/0/0
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/0/0/1
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/0/0/2
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration: |2-
+
+      Mon Apr 24 04:59:59.185 UTC
+      Building configuration...
+      !! IOS XR Configuration 6.6.3
+      !! Last configuration change at Mon Apr 24 04:59:57 2023 by cisco
+      !
+      hostname PE_M3_1_XR
+      logging console disable
+      vrf MGMT
+       address-family ipv4 unicast
+       !
+      !
+      line console
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      line default
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      interface Loopback0
+       ipv4 address 10.0.5.1 255.255.255.255
+      !
+      interface MgmtEth0/0/CPU0/0
+       vrf MGMT
+       ipv4 address 192.168.1.131 255.255.255.0
+      !
+      interface GigabitEthernet0/0/0/0
+       ipv4 address 192.168.5.1 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/1
+       ipv4 address 192.168.5.3 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/2
+       shutdown
+      !
+      router static
+       vrf MGMT
+        address-family ipv4 unicast
+         0.0.0.0/0 192.168.1.254
+        !
+       !
+      !
+      router isis METRO3
+       net 49.0005.0005.0000.0001.00
+       address-family ipv4 unicast
+        metric-style wide
+       !
+       interface Loopback0
+        passive
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/0
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/1
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+      !
+      ssh server dscp 30
+      ssh server logging
+      ssh server rate-limit 100
+      ssh server capability netconf-xml
+      ssh server rekey-volume 4095
+      ssh server session-limit 100
+      ssh server v2
+      ssh server vrf MGMT
+      end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n11
+    image_definition: XRv 663
+    label: PE_M3_1_XR
+    node_definition: iosxrv
+    ram: null
+    tags: []
+    x: 560
+    y: 600
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: MgmtEth0/0/CPU0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/0/0/0
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/0/0/1
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/0/0/2
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration: |2-
+
+      Mon Apr 24 05:02:47.646 UTC
+      Building configuration...
+      !! IOS XR Configuration 6.6.3
+      !! Last configuration change at Mon Apr 24 05:02:45 2023 by cisco
+      !
+      hostname PE_M2_1_XR
+      logging console disable
+      vrf MGMT
+       address-family ipv4 unicast
+       !
+      !
+      line console
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      line default
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      interface Loopback0
+       ipv4 address 10.0.4.1 255.255.255.255
+      !
+      interface MgmtEth0/0/CPU0/0
+       vrf MGMT
+       ipv4 address 192.168.1.121 255.255.255.0
+      !
+      interface GigabitEthernet0/0/0/0
+       ipv4 address 192.168.4.1 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/1
+       ipv4 address 192.168.4.3 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/2
+       shutdown
+      !
+      router static
+       vrf MGMT
+        address-family ipv4 unicast
+         0.0.0.0/0 192.168.1.254
+        !
+       !
+      !
+      router ospf METRO2
+       router-id 10.0.4.1
+       network point-to-point
+       address-family ipv4 unicast
+       area 0
+        interface Loopback0
+         passive enable
+        !
+        interface GigabitEthernet0/0/0/0
+        !
+        interface GigabitEthernet0/0/0/1
+        !
+       !
+      !
+      ssh server dscp 30
+      ssh server logging
+      ssh server rate-limit 100
+      ssh server capability netconf-xml
+      ssh server rekey-volume 4095
+      ssh server session-limit 100
+      ssh server v2
+      ssh server vrf MGMT
+      end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: true
+    id: n12
+    image_definition: XRv 663
+    label: PE_M2_1_XR
+    node_definition: iosxrv
+    ram: null
+    tags: []
+    x: 560
+    y: 160
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: MgmtEth0/0/CPU0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/0/0/0
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/0/0/1
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/0/0/2
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration: |2-
+
+      Mon Apr 24 04:53:12.367 UTC
+      Building configuration...
+      !! IOS XR Configuration 6.6.3
+      !! Last configuration change at Mon Apr 24 04:53:10 2023 by cisco
+      !
+      hostname PE_M1_1_XR
+      logging console disable
+      vrf MGMT
+       address-family ipv4 unicast
+       !
+      !
+      line console
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      line default
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      interface Loopback0
+       ipv4 address 10.0.3.1 255.255.255.255
+      !
+      interface MgmtEth0/0/CPU0/0
+       vrf MGMT
+       ipv4 address 192.168.1.111 255.255.255.0
+      !
+      interface GigabitEthernet0/0/0/0
+       ipv4 address 192.168.3.0 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/1
+       ipv4 address 192.168.3.2 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/2
+       shutdown
+      !
+      router static
+       vrf MGMT
+        address-family ipv4 unicast
+         0.0.0.0/0 192.168.1.254
+        !
+       !
+      !
+      router isis METRO1
+       net 49.0003.0003.0000.0001.00
+       address-family ipv4 unicast
+        metric-style wide
+       !
+       interface Loopback0
+        passive
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/0
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/1
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+      !
+      ssh server dscp 30
+      ssh server logging
+      ssh server rate-limit 100
+      ssh server capability netconf-xml
+      ssh server rekey-volume 4095
+      ssh server session-limit 100
+      ssh server v2
+      ssh server vrf MGMT
+      end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n13
+    image_definition: XRv 663
+    label: PE_M1_1_XR
+    node_definition: iosxrv
+    ram: null
+    tags: []
+    x: -560
+    y: 320
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: MgmtEth0/0/CPU0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/0/0/0
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/0/0/1
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/0/0/2
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration: |2-
+
+      Mon Apr 24 04:57:19.132 UTC
+      Building configuration...
+      !! IOS XR Configuration 6.6.3
+      !! Last configuration change at Mon Apr 24 04:57:17 2023 by cisco
+      !
+      hostname P_M1_4_XR
+      logging console disable
+      vrf MGMT
+       address-family ipv4 unicast
+       !
+      !
+      line console
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      line default
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      interface Loopback0
+       ipv4 address 10.0.3.4 255.255.255.255
+      !
+      interface MgmtEth0/0/CPU0/0
+       vrf MGMT
+       ipv4 address 192.168.1.114 255.255.255.0
+      !
+      interface GigabitEthernet0/0/0/0
+       ipv4 address 192.168.3.7 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/1
+       ipv4 address 192.168.3.3 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/2
+       ipv4 address 192.168.3.42 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/3
+       ipv4 address 192.168.3.12 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/4
+       ipv4 address 192.168.3.14 255.255.255.254
+      !
+      router static
+       vrf MGMT
+        address-family ipv4 unicast
+         0.0.0.0/0 192.168.1.254
+        !
+       !
+      !
+      router isis METRO1
+       net 49.0003.0003.0000.0004.00
+       address-family ipv4 unicast
+        metric-style wide
+       !
+       interface Loopback0
+        passive
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/0
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/1
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/2
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/3
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/4
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+      !
+      ssh server dscp 30
+      ssh server logging
+      ssh server rate-limit 100
+      ssh server capability netconf-xml
+      ssh server rekey-volume 4095
+      ssh server session-limit 100
+      ssh server v2
+      ssh server vrf MGMT
+      end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n14
+    image_definition: XRv 663
+    label: P_M1_4_XR
+    node_definition: iosxrv
+    ram: null
+    tags: []
+    x: -400
+    y: 520
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: MgmtEth0/0/CPU0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/0/0/0
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/0/0/1
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/0/0/2
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet0/0/0/3
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet0/0/0/4
+        slot: 5
+        type: physical
+  - boot_disk_size: null
+    configuration: "Building configuration...\n\nCurrent configuration : 6760 bytes\n\
+      !\n! Last configuration change at 04:56:30 UTC Mon Apr 24 2023\n!\nversion 17.3\n\
+      service timestamps debug datetime msec\nservice timestamps log datetime msec\n\
+      ! Call-home is enabled by Smart-Licensing.\nservice call-home\nplatform qfp\
+      \ utilization monitor load 80\nplatform punt-keepalive disable-kernel-core\n\
+      platform console serial\n!\nhostname PE_M1_2_XE\n!\nboot-start-marker\nboot-end-marker\n\
+      !\n!\nvrf definition MGMT\n !\n address-family ipv4\n exit-address-family\n\
+      !\nno logging console\n!\nno aaa new-model\n!\n!\n!\n!\n!\n!\n!\nip domain name\
+      \ cisco.com\n!\n!\n!\nlogin on-success log\n!\n!\n!\n!\n!\n!\n!\nsubscriber\
+      \ templating\n!\n!\n!\n!\n!\n!\nmultilink bundle-name authenticated\n!\ndomain\
+      \ cisco.com\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\ncrypto pki trustpoint\
+      \ SLA-TrustPoint\n enrollment pkcs12\n revocation-check crl\n!\n!\ncrypto pki\
+      \ certificate chain SLA-TrustPoint\n certificate ca 01\n  30820321 30820209\
+      \ A0030201 02020101 300D0609 2A864886 F70D0101 0B050030\n  32310E30 0C060355\
+      \ 040A1305 43697363 6F312030 1E060355 04031317 43697363\n  6F204C69 63656E73\
+      \ 696E6720 526F6F74 20434130 1E170D31 33303533 30313934\n  3834375A 170D3338\
+      \ 30353330 31393438 34375A30 32310E30 0C060355 040A1305\n  43697363 6F312030\
+      \ 1E060355 04031317 43697363 6F204C69 63656E73 696E6720\n  526F6F74 20434130\
+      \ 82012230 0D06092A 864886F7 0D010101 05000382 010F0030\n  82010A02 82010100\
+      \ A6BCBD96 131E05F7 145EA72C 2CD686E6 17222EA1 F1EFF64D\n  CBB4C798 212AA147\
+      \ C655D8D7 9471380D 8711441E 1AAF071A 9CAE6388 8A38E520\n  1C394D78 462EF239\
+      \ C659F715 B98C0A59 5BBB5CBD 0CFEBEA3 700A8BF7 D8F256EE\n  4AA4E80D DB6FD1C9\
+      \ 60B1FD18 FFC69C96 6FA68957 A2617DE7 104FDC5F EA2956AC\n  7390A3EB 2B5436AD\
+      \ C847A2C5 DAB553EB 69A9A535 58E9F3E3 C0BD23CF 58BD7188\n  68E69491 20F320E7\
+      \ 948E71D7 AE3BCC84 F10684C7 4BC8E00F 539BA42B 42C68BB7\n  C7479096 B4CB2D62\
+      \ EA2F505D C7B062A4 6811D95B E8250FC4 5D5D5FB8 8F27D191\n  C55F0D76 61F9A4CD\
+      \ 3D992327 A8BB03BD 4E6D7069 7CBADF8B DF5F4368 95135E44\n  DFC7C6CF 04DD7FD1\
+      \ 02030100 01A34230 40300E06 03551D0F 0101FF04 04030201\n  06300F06 03551D13\
+      \ 0101FF04 05300301 01FF301D 0603551D 0E041604 1449DC85\n  4B3D31E5 1B3E6A17\
+      \ 606AF333 3D3B4C73 E8300D06 092A8648 86F70D01 010B0500\n  03820101 00507F24\
+      \ D3932A66 86025D9F E838AE5C 6D4DF6B0 49631C78 240DA905\n  604EDCDE FF4FED2B\
+      \ 77FC460E CD636FDB DD44681E 3A5673AB 9093D3B1 6C9E3D8B\n  D98987BF E40CBD9E\
+      \ 1AECA0C2 2189BB5C 8FA85686 CD98B646 5575B146 8DFC66A8\n  467A3DF4 4D565700\
+      \ 6ADF0F0D CF835015 3C04FF7C 21E878AC 11BA9CD2 55A9232C\n  7CA7B7E6 C1AF74F6\
+      \ 152E99B7 B1FCF9BB E973DE7F 5BDDEB86 C71E3B49 1765308B\n  5FB0DA06 B92AFE7F\
+      \ 494E8A9E 07B85737 F3A58BE1 1A48A229 C37C1E69 39F08678\n  80DDCD16 D6BACECA\
+      \ EEBC7CF9 8428787B 35202CDC 60E4616A B623CDBD 230E3AFB\n  418616A9 4093E049\
+      \ 4D10AB75 27E86F73 932E35B5 8862FDAE 0275156F 719BB2F0\n  D697DF7F 28\n  \t\
+      quit\n!\nlicense udi pid CSR1000V sn 9Y4O9KZ3SZJ\ndiagnostic bootup level minimal\n\
+      memory free low-watermark processor 71465\n!\n!\nspanning-tree extend system-id\n\
+      !\nusername cisco privilege 15 secret 9 $9$5h0PWANiXSPo2k$wJQXBQto2UiQVMT/IUjfrDFy/z/1qTDGioXWJDmvWTo\n\
+      !\nredundancy\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n\
+      !\n!\n!\n!\n!\ninterface Loopback0\n ip address 10.0.3.2 255.255.255.255\n ip\
+      \ router isis METRO1\n!\ninterface GigabitEthernet1\n ip address 192.168.3.6\
+      \ 255.255.255.254\n ip router isis METRO1\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n isis network point-to-point\n!\ninterface GigabitEthernet2\n\
+      \ ip address 192.168.3.4 255.255.255.254\n ip router isis METRO1\n negotiation\
+      \ auto\n no mop enabled\n no mop sysid\n isis network point-to-point\n!\ninterface\
+      \ GigabitEthernet3\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet4\n no ip address\n shutdown\n negotiation\
+      \ auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet5\n no ip\
+      \ address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\n\
+      interface GigabitEthernet6\n no ip address\n shutdown\n negotiation auto\n no\
+      \ mop enabled\n no mop sysid\n!\ninterface GigabitEthernet7\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet8\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet9\n no ip address\n shutdown\n negotiation\
+      \ auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet10\n no\
+      \ ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet11\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet12\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet13\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet14\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet15\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet16\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet17\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet18\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet19\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet20\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet21\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet22\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet23\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet24\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet25\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet26\n vrf forwarding MGMT\n ip address 192.168.1.112\
+      \ 255.255.255.0\n negotiation auto\n no mop enabled\n no mop sysid\n!\nrouter\
+      \ isis METRO1\n net 49.0003.0003.0000.0002.00\n metric-style wide\n!\nip forward-protocol\
+      \ nd\nno ip http server\nip http secure-server\n!\nip route vrf MGMT 0.0.0.0\
+      \ 0.0.0.0 GigabitEthernet26 192.168.1.254\nip ssh source-interface GigabitEthernet26\n\
+      ip ssh version 2\n!\n!\n!\n!\n!\n!\n!\ncontrol-plane\n!\n!\n!\n!\n!\n!\nline\
+      \ con 0\n exec-timeout 0 0\n stopbits 1\nline vty 0 4\n exec-timeout 0 0\n privilege\
+      \ level 15\n login local\n transport input ssh\n!\ncall-home\n ! If contact\
+      \ email address in call-home is configured as sch-smart-licensing@cisco.com\n\
+      \ ! the email address configured in Cisco Smart License Portal will be used\
+      \ as contact email address to send SCH notifications.\n contact-email-addr sch-smart-licensing@cisco.com\n\
+      \ profile \"CiscoTAC-1\"\n  active\n  destination transport-method http\n!\n\
+      !\n!\n!\n!\nend"
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n15
+    image_definition: csr1000v-17-03-06
+    label: PE_M1_2_XE
+    node_definition: csr1000v
+    ram: null
+    tags: []
+    x: -560
+    y: 520
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet2
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet3
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet4
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet5
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet6
+        slot: 5
+        type: physical
+      - id: i7
+        label: GigabitEthernet7
+        slot: 6
+        type: physical
+      - id: i8
+        label: GigabitEthernet8
+        slot: 7
+        type: physical
+      - id: i9
+        label: GigabitEthernet9
+        slot: 8
+        type: physical
+      - id: i10
+        label: GigabitEthernet10
+        slot: 9
+        type: physical
+      - id: i11
+        label: GigabitEthernet11
+        slot: 10
+        type: physical
+      - id: i12
+        label: GigabitEthernet12
+        slot: 11
+        type: physical
+      - id: i13
+        label: GigabitEthernet13
+        slot: 12
+        type: physical
+      - id: i14
+        label: GigabitEthernet14
+        slot: 13
+        type: physical
+      - id: i15
+        label: GigabitEthernet15
+        slot: 14
+        type: physical
+      - id: i16
+        label: GigabitEthernet16
+        slot: 15
+        type: physical
+      - id: i17
+        label: GigabitEthernet17
+        slot: 16
+        type: physical
+      - id: i18
+        label: GigabitEthernet18
+        slot: 17
+        type: physical
+      - id: i19
+        label: GigabitEthernet19
+        slot: 18
+        type: physical
+      - id: i20
+        label: GigabitEthernet20
+        slot: 19
+        type: physical
+      - id: i21
+        label: GigabitEthernet21
+        slot: 20
+        type: physical
+      - id: i22
+        label: GigabitEthernet22
+        slot: 21
+        type: physical
+      - id: i23
+        label: GigabitEthernet23
+        slot: 22
+        type: physical
+      - id: i24
+        label: GigabitEthernet24
+        slot: 23
+        type: physical
+      - id: i25
+        label: GigabitEthernet25
+        slot: 24
+        type: physical
+      - id: i26
+        label: GigabitEthernet26
+        slot: 25
+        type: physical
+  - boot_disk_size: null
+    configuration: "Building configuration...\n\nCurrent configuration : 6948 bytes\n\
+      !\n! Last configuration change at 04:56:45 UTC Mon Apr 24 2023\n!\nversion 17.3\n\
+      service timestamps debug datetime msec\nservice timestamps log datetime msec\n\
+      ! Call-home is enabled by Smart-Licensing.\nservice call-home\nplatform qfp\
+      \ utilization monitor load 80\nplatform punt-keepalive disable-kernel-core\n\
+      platform console serial\n!\nhostname P_M1_3_XE\n!\nboot-start-marker\nboot-end-marker\n\
+      !\n!\nvrf definition MGMT\n !\n address-family ipv4\n exit-address-family\n\
+      !\nno logging console\n!\nno aaa new-model\n!\n!\n!\n!\n!\n!\n!\nip domain name\
+      \ cisco.com\n!\n!\n!\nlogin on-success log\n!\n!\n!\n!\n!\n!\n!\nsubscriber\
+      \ templating\n!\n!\n!\n!\n!\n!\nmultilink bundle-name authenticated\n!\n!\n\
+      !\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\ncrypto pki trustpoint SLA-TrustPoint\n\
+      \ enrollment pkcs12\n revocation-check crl\n!\n!\ncrypto pki certificate chain\
+      \ SLA-TrustPoint\n certificate ca 01\n  30820321 30820209 A0030201 02020101\
+      \ 300D0609 2A864886 F70D0101 0B050030\n  32310E30 0C060355 040A1305 43697363\
+      \ 6F312030 1E060355 04031317 43697363\n  6F204C69 63656E73 696E6720 526F6F74\
+      \ 20434130 1E170D31 33303533 30313934\n  3834375A 170D3338 30353330 31393438\
+      \ 34375A30 32310E30 0C060355 040A1305\n  43697363 6F312030 1E060355 04031317\
+      \ 43697363 6F204C69 63656E73 696E6720\n  526F6F74 20434130 82012230 0D06092A\
+      \ 864886F7 0D010101 05000382 010F0030\n  82010A02 82010100 A6BCBD96 131E05F7\
+      \ 145EA72C 2CD686E6 17222EA1 F1EFF64D\n  CBB4C798 212AA147 C655D8D7 9471380D\
+      \ 8711441E 1AAF071A 9CAE6388 8A38E520\n  1C394D78 462EF239 C659F715 B98C0A59\
+      \ 5BBB5CBD 0CFEBEA3 700A8BF7 D8F256EE\n  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96\
+      \ 6FA68957 A2617DE7 104FDC5F EA2956AC\n  7390A3EB 2B5436AD C847A2C5 DAB553EB\
+      \ 69A9A535 58E9F3E3 C0BD23CF 58BD7188\n  68E69491 20F320E7 948E71D7 AE3BCC84\
+      \ F10684C7 4BC8E00F 539BA42B 42C68BB7\n  C7479096 B4CB2D62 EA2F505D C7B062A4\
+      \ 6811D95B E8250FC4 5D5D5FB8 8F27D191\n  C55F0D76 61F9A4CD 3D992327 A8BB03BD\
+      \ 4E6D7069 7CBADF8B DF5F4368 95135E44\n  DFC7C6CF 04DD7FD1 02030100 01A34230\
+      \ 40300E06 03551D0F 0101FF04 04030201\n  06300F06 03551D13 0101FF04 05300301\
+      \ 01FF301D 0603551D 0E041604 1449DC85\n  4B3D31E5 1B3E6A17 606AF333 3D3B4C73\
+      \ E8300D06 092A8648 86F70D01 010B0500\n  03820101 00507F24 D3932A66 86025D9F\
+      \ E838AE5C 6D4DF6B0 49631C78 240DA905\n  604EDCDE FF4FED2B 77FC460E CD636FDB\
+      \ DD44681E 3A5673AB 9093D3B1 6C9E3D8B\n  D98987BF E40CBD9E 1AECA0C2 2189BB5C\
+      \ 8FA85686 CD98B646 5575B146 8DFC66A8\n  467A3DF4 4D565700 6ADF0F0D CF835015\
+      \ 3C04FF7C 21E878AC 11BA9CD2 55A9232C\n  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB\
+      \ E973DE7F 5BDDEB86 C71E3B49 1765308B\n  5FB0DA06 B92AFE7F 494E8A9E 07B85737\
+      \ F3A58BE1 1A48A229 C37C1E69 39F08678\n  80DDCD16 D6BACECA EEBC7CF9 8428787B\
+      \ 35202CDC 60E4616A B623CDBD 230E3AFB\n  418616A9 4093E049 4D10AB75 27E86F73\
+      \ 932E35B5 8862FDAE 0275156F 719BB2F0\n  D697DF7F 28\n  \tquit\n!\nlicense udi\
+      \ pid CSR1000V sn 92Q19ESRGUF\ndiagnostic bootup level minimal\nmemory free\
+      \ low-watermark processor 71465\n!\n!\nspanning-tree extend system-id\n!\nusername\
+      \ cisco privilege 15 secret 9 $9$DN0yKCjADtNWDU$FrKreAp.CpxVlMJu9ezxpKKCp80jFS2xOFIgxTaix1o\n\
+      !\nredundancy\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n\
+      !\n!\n!\n!\n!\ninterface Loopback0\n ip address 10.0.3.3 255.255.255.255\n ip\
+      \ router isis METRO1\n!\ninterface GigabitEthernet1\n ip address 192.168.3.1\
+      \ 255.255.255.254\n ip router isis METRO1\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n isis network point-to-point\n!\ninterface GigabitEthernet2\n\
+      \ ip address 192.168.3.5 255.255.255.254\n ip router isis METRO1\n negotiation\
+      \ auto\n no mop enabled\n no mop sysid\n isis network point-to-point\n!\ninterface\
+      \ GigabitEthernet3\n ip address 192.168.3.40 255.255.255.254\n ip router isis\
+      \ METRO1\n negotiation auto\n no mop enabled\n no mop sysid\n isis network point-to-point\n\
+      !\ninterface GigabitEthernet4\n ip address 192.168.3.8 255.255.255.254\n ip\
+      \ router isis METRO1\n negotiation auto\n no mop enabled\n no mop sysid\n isis\
+      \ network point-to-point\n!\ninterface GigabitEthernet5\n ip address 192.168.3.10\
+      \ 255.255.255.254\n ip router isis METRO1\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n isis network point-to-point\n!\ninterface GigabitEthernet6\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet7\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet8\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet9\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet10\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet11\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet12\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet13\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet14\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet15\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet16\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet17\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet18\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet19\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet20\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet21\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet22\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet23\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet24\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet25\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet26\n\
+      \ vrf forwarding MGMT\n ip address 192.168.1.113 255.255.255.0\n negotiation\
+      \ auto\n no mop enabled\n no mop sysid\n!\nrouter isis METRO1\n net 49.0003.0003.0000.0003.00\n\
+      \ metric-style wide\n!\nip forward-protocol nd\nno ip http server\nip http secure-server\n\
+      !\nip route vrf MGMT 0.0.0.0 0.0.0.0 GigabitEthernet26 192.168.1.254\nip ssh\
+      \ source-interface GigabitEthernet26\nip ssh version 2\n!\n!\n!\n!\n!\n!\n!\n\
+      control-plane\n!\n!\n!\n!\n!\n!\nline con 0\n exec-timeout 0 0\n stopbits 1\n\
+      line vty 0 4\n exec-timeout 0 0\n privilege level 15\n login local\n transport\
+      \ input ssh\n!\ncall-home\n ! If contact email address in call-home is configured\
+      \ as sch-smart-licensing@cisco.com\n ! the email address configured in Cisco\
+      \ Smart License Portal will be used as contact email address to send SCH notifications.\n\
+      \ contact-email-addr sch-smart-licensing@cisco.com\n profile \"CiscoTAC-1\"\n\
+      \  active\n  destination transport-method http\n!\n!\n!\n!\n!\nend"
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n16
+    image_definition: csr1000v-17-03-06
+    label: P_M1_3_XE
+    node_definition: csr1000v
+    ram: null
+    tags: []
+    x: -400
+    y: 320
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet2
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet3
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet4
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet5
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet6
+        slot: 5
+        type: physical
+      - id: i7
+        label: GigabitEthernet7
+        slot: 6
+        type: physical
+      - id: i8
+        label: GigabitEthernet8
+        slot: 7
+        type: physical
+      - id: i9
+        label: GigabitEthernet9
+        slot: 8
+        type: physical
+      - id: i10
+        label: GigabitEthernet10
+        slot: 9
+        type: physical
+      - id: i11
+        label: GigabitEthernet11
+        slot: 10
+        type: physical
+      - id: i12
+        label: GigabitEthernet12
+        slot: 11
+        type: physical
+      - id: i13
+        label: GigabitEthernet13
+        slot: 12
+        type: physical
+      - id: i14
+        label: GigabitEthernet14
+        slot: 13
+        type: physical
+      - id: i15
+        label: GigabitEthernet15
+        slot: 14
+        type: physical
+      - id: i16
+        label: GigabitEthernet16
+        slot: 15
+        type: physical
+      - id: i17
+        label: GigabitEthernet17
+        slot: 16
+        type: physical
+      - id: i18
+        label: GigabitEthernet18
+        slot: 17
+        type: physical
+      - id: i19
+        label: GigabitEthernet19
+        slot: 18
+        type: physical
+      - id: i20
+        label: GigabitEthernet20
+        slot: 19
+        type: physical
+      - id: i21
+        label: GigabitEthernet21
+        slot: 20
+        type: physical
+      - id: i22
+        label: GigabitEthernet22
+        slot: 21
+        type: physical
+      - id: i23
+        label: GigabitEthernet23
+        slot: 22
+        type: physical
+      - id: i24
+        label: GigabitEthernet24
+        slot: 23
+        type: physical
+      - id: i25
+        label: GigabitEthernet25
+        slot: 24
+        type: physical
+      - id: i26
+        label: GigabitEthernet26
+        slot: 25
+        type: physical
+  - boot_disk_size: null
+    configuration: "Building configuration...\n\nCurrent configuration : 6941 bytes\n\
+      !\n! Last configuration change at 05:00:53 UTC Mon Apr 24 2023\n!\nversion 17.3\n\
+      service timestamps debug datetime msec\nservice timestamps log datetime msec\n\
+      ! Call-home is enabled by Smart-Licensing.\nservice call-home\nplatform qfp\
+      \ utilization monitor load 80\nplatform punt-keepalive disable-kernel-core\n\
+      platform console serial\n!\nhostname ABR_C1_6_XE\n!\nboot-start-marker\nboot-end-marker\n\
+      !\n!\nvrf definition MGMT\n !\n address-family ipv4\n exit-address-family\n\
+      !\nno logging console\n!\nno aaa new-model\n!\n!\n!\n!\n!\n!\n!\nip domain name\
+      \ cisco.com\n!\n!\n!\nlogin on-success log\n!\n!\n!\n!\n!\n!\n!\nsubscriber\
+      \ templating\n!\n!\n!\n!\n!\n!\nmultilink bundle-name authenticated\n!\n!\n\
+      !\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\ncrypto pki trustpoint SLA-TrustPoint\n\
+      \ enrollment pkcs12\n revocation-check crl\n!\n!\ncrypto pki certificate chain\
+      \ SLA-TrustPoint\n certificate ca 01\n  30820321 30820209 A0030201 02020101\
+      \ 300D0609 2A864886 F70D0101 0B050030\n  32310E30 0C060355 040A1305 43697363\
+      \ 6F312030 1E060355 04031317 43697363\n  6F204C69 63656E73 696E6720 526F6F74\
+      \ 20434130 1E170D31 33303533 30313934\n  3834375A 170D3338 30353330 31393438\
+      \ 34375A30 32310E30 0C060355 040A1305\n  43697363 6F312030 1E060355 04031317\
+      \ 43697363 6F204C69 63656E73 696E6720\n  526F6F74 20434130 82012230 0D06092A\
+      \ 864886F7 0D010101 05000382 010F0030\n  82010A02 82010100 A6BCBD96 131E05F7\
+      \ 145EA72C 2CD686E6 17222EA1 F1EFF64D\n  CBB4C798 212AA147 C655D8D7 9471380D\
+      \ 8711441E 1AAF071A 9CAE6388 8A38E520\n  1C394D78 462EF239 C659F715 B98C0A59\
+      \ 5BBB5CBD 0CFEBEA3 700A8BF7 D8F256EE\n  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96\
+      \ 6FA68957 A2617DE7 104FDC5F EA2956AC\n  7390A3EB 2B5436AD C847A2C5 DAB553EB\
+      \ 69A9A535 58E9F3E3 C0BD23CF 58BD7188\n  68E69491 20F320E7 948E71D7 AE3BCC84\
+      \ F10684C7 4BC8E00F 539BA42B 42C68BB7\n  C7479096 B4CB2D62 EA2F505D C7B062A4\
+      \ 6811D95B E8250FC4 5D5D5FB8 8F27D191\n  C55F0D76 61F9A4CD 3D992327 A8BB03BD\
+      \ 4E6D7069 7CBADF8B DF5F4368 95135E44\n  DFC7C6CF 04DD7FD1 02030100 01A34230\
+      \ 40300E06 03551D0F 0101FF04 04030201\n  06300F06 03551D13 0101FF04 05300301\
+      \ 01FF301D 0603551D 0E041604 1449DC85\n  4B3D31E5 1B3E6A17 606AF333 3D3B4C73\
+      \ E8300D06 092A8648 86F70D01 010B0500\n  03820101 00507F24 D3932A66 86025D9F\
+      \ E838AE5C 6D4DF6B0 49631C78 240DA905\n  604EDCDE FF4FED2B 77FC460E CD636FDB\
+      \ DD44681E 3A5673AB 9093D3B1 6C9E3D8B\n  D98987BF E40CBD9E 1AECA0C2 2189BB5C\
+      \ 8FA85686 CD98B646 5575B146 8DFC66A8\n  467A3DF4 4D565700 6ADF0F0D CF835015\
+      \ 3C04FF7C 21E878AC 11BA9CD2 55A9232C\n  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB\
+      \ E973DE7F 5BDDEB86 C71E3B49 1765308B\n  5FB0DA06 B92AFE7F 494E8A9E 07B85737\
+      \ F3A58BE1 1A48A229 C37C1E69 39F08678\n  80DDCD16 D6BACECA EEBC7CF9 8428787B\
+      \ 35202CDC 60E4616A B623CDBD 230E3AFB\n  418616A9 4093E049 4D10AB75 27E86F73\
+      \ 932E35B5 8862FDAE 0275156F 719BB2F0\n  D697DF7F 28\n  \tquit\n!\nlicense udi\
+      \ pid CSR1000V sn 9G1C38IVHD0\ndiagnostic bootup level minimal\nmemory free\
+      \ low-watermark processor 71465\n!\n!\nspanning-tree extend system-id\n!\nusername\
+      \ cisco privilege 15 secret 9 $9$ya3qXAJT8xWf4E$4ugQiGvQrwgnOIMn/7YE1kq0nAs6fRWcRPGEZeuyHMA\n\
+      !\nredundancy\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n\
+      !\n!\n!\n!\n!\ninterface Loopback0\n description For_CORE1\n ip address 10.0.1.6\
+      \ 255.255.255.255\n ip router isis CORE1\n!\ninterface Loopback1\n description\
+      \ For_METRO1\n ip address 10.0.3.8 255.255.255.255\n ip router isis METRO1\n\
+      !\ninterface GigabitEthernet1\n ip address 192.168.3.11 255.255.255.254\n ip\
+      \ router isis METRO1\n negotiation auto\n no mop enabled\n no mop sysid\n isis\
+      \ network point-to-point\n!\ninterface GigabitEthernet2\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet3\n\
+      \ ip address 192.168.1.9 255.255.255.254\n ip router isis CORE1\n negotiation\
+      \ auto\n no mop enabled\n no mop sysid\n isis network point-to-point\n!\ninterface\
+      \ GigabitEthernet4\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet5\n no ip address\n shutdown\n negotiation\
+      \ auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet6\n no ip\
+      \ address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\n\
+      interface GigabitEthernet7\n no ip address\n shutdown\n negotiation auto\n no\
+      \ mop enabled\n no mop sysid\n!\ninterface GigabitEthernet8\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet9\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet10\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet11\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet12\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet13\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet14\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet15\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet16\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet17\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet18\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet19\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet20\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet21\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet22\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet23\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet24\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet25\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet26\n\
+      \ vrf forwarding MGMT\n ip address 192.168.1.16 255.255.255.0\n negotiation\
+      \ auto\n no mop enabled\n no mop sysid\n!\nrouter isis CORE1\n net 49.0001.0001.0000.0006.00\n\
+      \ metric-style wide\n!\nrouter isis METRO1\n net 49.0003.0003.0000.0008.00\n\
+      \ metric-style wide\n!\nip forward-protocol nd\nno ip http server\nip http secure-server\n\
+      !\nip route vrf MGMT 0.0.0.0 0.0.0.0 GigabitEthernet26 192.168.1.254\nip ssh\
+      \ source-interface GigabitEthernet26\nip ssh version 2\n!\n!\n!\n!\n!\n!\n!\n\
+      control-plane\n!\n!\n!\n!\n!\n!\nline con 0\n exec-timeout 0 0\n stopbits 1\n\
+      line vty 0 4\n exec-timeout 0 0\n privilege level 15\n login local\n transport\
+      \ input ssh\n!\ncall-home\n ! If contact email address in call-home is configured\
+      \ as sch-smart-licensing@cisco.com\n ! the email address configured in Cisco\
+      \ Smart License Portal will be used as contact email address to send SCH notifications.\n\
+      \ contact-email-addr sch-smart-licensing@cisco.com\n profile \"CiscoTAC-1\"\n\
+      \  active\n  destination transport-method http\n!\n!\n!\n!\n!\nend"
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n17
+    image_definition: csr1000v-17-03-06
+    label: ABR_C1_6_XE
+    node_definition: csr1000v
+    ram: null
+    tags: []
+    x: -240
+    y: 320
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet2
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet3
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet4
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet5
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet6
+        slot: 5
+        type: physical
+      - id: i7
+        label: GigabitEthernet7
+        slot: 6
+        type: physical
+      - id: i8
+        label: GigabitEthernet8
+        slot: 7
+        type: physical
+      - id: i9
+        label: GigabitEthernet9
+        slot: 8
+        type: physical
+      - id: i10
+        label: GigabitEthernet10
+        slot: 9
+        type: physical
+      - id: i11
+        label: GigabitEthernet11
+        slot: 10
+        type: physical
+      - id: i12
+        label: GigabitEthernet12
+        slot: 11
+        type: physical
+      - id: i13
+        label: GigabitEthernet13
+        slot: 12
+        type: physical
+      - id: i14
+        label: GigabitEthernet14
+        slot: 13
+        type: physical
+      - id: i15
+        label: GigabitEthernet15
+        slot: 14
+        type: physical
+      - id: i16
+        label: GigabitEthernet16
+        slot: 15
+        type: physical
+      - id: i17
+        label: GigabitEthernet17
+        slot: 16
+        type: physical
+      - id: i18
+        label: GigabitEthernet18
+        slot: 17
+        type: physical
+      - id: i19
+        label: GigabitEthernet19
+        slot: 18
+        type: physical
+      - id: i20
+        label: GigabitEthernet20
+        slot: 19
+        type: physical
+      - id: i21
+        label: GigabitEthernet21
+        slot: 20
+        type: physical
+      - id: i22
+        label: GigabitEthernet22
+        slot: 21
+        type: physical
+      - id: i23
+        label: GigabitEthernet23
+        slot: 22
+        type: physical
+      - id: i24
+        label: GigabitEthernet24
+        slot: 23
+        type: physical
+      - id: i25
+        label: GigabitEthernet25
+        slot: 24
+        type: physical
+      - id: i26
+        label: GigabitEthernet26
+        slot: 25
+        type: physical
+  - boot_disk_size: null
+    configuration: "Building configuration...\n\nCurrent configuration : 6694 bytes\n\
+      !\n! Last configuration change at 04:57:48 UTC Mon Apr 24 2023\n!\nversion 17.3\n\
+      service timestamps debug datetime msec\nservice timestamps log datetime msec\n\
+      ! Call-home is enabled by Smart-Licensing.\nservice call-home\nplatform qfp\
+      \ utilization monitor load 80\nplatform punt-keepalive disable-kernel-core\n\
+      platform console serial\n!\nhostname ASBR_M1_6_XE\n!\nboot-start-marker\nboot-end-marker\n\
+      !\n!\nvrf definition MGMT\n !\n address-family ipv4\n exit-address-family\n\
+      !\nno logging console\n!\nno aaa new-model\n!\n!\n!\n!\n!\n!\n!\nip domain name\
+      \ cisco.com\n!\n!\n!\nlogin on-success log\n!\n!\n!\n!\n!\n!\n!\nsubscriber\
+      \ templating\n!\n!\n!\n!\n!\n!\nmultilink bundle-name authenticated\n!\n!\n\
+      !\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\ncrypto pki trustpoint SLA-TrustPoint\n\
+      \ enrollment pkcs12\n revocation-check crl\n!\n!\ncrypto pki certificate chain\
+      \ SLA-TrustPoint\n certificate ca 01\n  30820321 30820209 A0030201 02020101\
+      \ 300D0609 2A864886 F70D0101 0B050030\n  32310E30 0C060355 040A1305 43697363\
+      \ 6F312030 1E060355 04031317 43697363\n  6F204C69 63656E73 696E6720 526F6F74\
+      \ 20434130 1E170D31 33303533 30313934\n  3834375A 170D3338 30353330 31393438\
+      \ 34375A30 32310E30 0C060355 040A1305\n  43697363 6F312030 1E060355 04031317\
+      \ 43697363 6F204C69 63656E73 696E6720\n  526F6F74 20434130 82012230 0D06092A\
+      \ 864886F7 0D010101 05000382 010F0030\n  82010A02 82010100 A6BCBD96 131E05F7\
+      \ 145EA72C 2CD686E6 17222EA1 F1EFF64D\n  CBB4C798 212AA147 C655D8D7 9471380D\
+      \ 8711441E 1AAF071A 9CAE6388 8A38E520\n  1C394D78 462EF239 C659F715 B98C0A59\
+      \ 5BBB5CBD 0CFEBEA3 700A8BF7 D8F256EE\n  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96\
+      \ 6FA68957 A2617DE7 104FDC5F EA2956AC\n  7390A3EB 2B5436AD C847A2C5 DAB553EB\
+      \ 69A9A535 58E9F3E3 C0BD23CF 58BD7188\n  68E69491 20F320E7 948E71D7 AE3BCC84\
+      \ F10684C7 4BC8E00F 539BA42B 42C68BB7\n  C7479096 B4CB2D62 EA2F505D C7B062A4\
+      \ 6811D95B E8250FC4 5D5D5FB8 8F27D191\n  C55F0D76 61F9A4CD 3D992327 A8BB03BD\
+      \ 4E6D7069 7CBADF8B DF5F4368 95135E44\n  DFC7C6CF 04DD7FD1 02030100 01A34230\
+      \ 40300E06 03551D0F 0101FF04 04030201\n  06300F06 03551D13 0101FF04 05300301\
+      \ 01FF301D 0603551D 0E041604 1449DC85\n  4B3D31E5 1B3E6A17 606AF333 3D3B4C73\
+      \ E8300D06 092A8648 86F70D01 010B0500\n  03820101 00507F24 D3932A66 86025D9F\
+      \ E838AE5C 6D4DF6B0 49631C78 240DA905\n  604EDCDE FF4FED2B 77FC460E CD636FDB\
+      \ DD44681E 3A5673AB 9093D3B1 6C9E3D8B\n  D98987BF E40CBD9E 1AECA0C2 2189BB5C\
+      \ 8FA85686 CD98B646 5575B146 8DFC66A8\n  467A3DF4 4D565700 6ADF0F0D CF835015\
+      \ 3C04FF7C 21E878AC 11BA9CD2 55A9232C\n  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB\
+      \ E973DE7F 5BDDEB86 C71E3B49 1765308B\n  5FB0DA06 B92AFE7F 494E8A9E 07B85737\
+      \ F3A58BE1 1A48A229 C37C1E69 39F08678\n  80DDCD16 D6BACECA EEBC7CF9 8428787B\
+      \ 35202CDC 60E4616A B623CDBD 230E3AFB\n  418616A9 4093E049 4D10AB75 27E86F73\
+      \ 932E35B5 8862FDAE 0275156F 719BB2F0\n  D697DF7F 28\n  \tquit\n!\nlicense udi\
+      \ pid CSR1000V sn 9A08G9XUT8G\ndiagnostic bootup level minimal\nmemory free\
+      \ low-watermark processor 71465\n!\n!\nspanning-tree extend system-id\n!\nusername\
+      \ cisco privilege 15 secret 9 $9$rkLS55i5ingZaU$KoYPhaJPbgkcCR4BK7BmWpULSdBpyB9Y8Yb1.gXTv06\n\
+      !\nredundancy\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n\
+      !\n!\n!\n!\n!\ninterface Loopback0\n ip address 10.0.3.6 255.255.255.255\n ip\
+      \ router isis METRO1\n!\ninterface GigabitEthernet1\n ip address 192.168.3.15\
+      \ 255.255.255.254\n ip router isis METRO1\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n isis network point-to-point\n!\ninterface GigabitEthernet2\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet3\n ip address 192.168.51.0 255.255.255.254\n negotiation\
+      \ auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet4\n no ip\
+      \ address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\n\
+      interface GigabitEthernet5\n no ip address\n shutdown\n negotiation auto\n no\
+      \ mop enabled\n no mop sysid\n!\ninterface GigabitEthernet6\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet7\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet8\n no ip address\n shutdown\n negotiation\
+      \ auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet9\n no ip\
+      \ address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\n\
+      interface GigabitEthernet10\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet11\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet12\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet13\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet14\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet15\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet16\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet17\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet18\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet19\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet20\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet21\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet22\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet23\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet24\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet25\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet26\n vrf forwarding\
+      \ MGMT\n ip address 192.168.1.116 255.255.255.0\n negotiation auto\n no mop\
+      \ enabled\n no mop sysid\n!\nrouter isis METRO1\n net 49.0003.0003.0000.0006.00\n\
+      \ metric-style wide\n!\nip forward-protocol nd\nno ip http server\nip http secure-server\n\
+      !\nip route vrf MGMT 0.0.0.0 0.0.0.0 GigabitEthernet26 192.168.1.254\nip ssh\
+      \ source-interface GigabitEthernet26\nip ssh version 2\n!\n!\n!\n!\n!\n!\n!\n\
+      control-plane\n!\n!\n!\n!\n!\n!\nline con 0\n exec-timeout 0 0\n stopbits 1\n\
+      line vty 0 4\n exec-timeout 0 0\n privilege level 15\n login local\n transport\
+      \ input ssh\n!\ncall-home\n ! If contact email address in call-home is configured\
+      \ as sch-smart-licensing@cisco.com\n ! the email address configured in Cisco\
+      \ Smart License Portal will be used as contact email address to send SCH notifications.\n\
+      \ contact-email-addr sch-smart-licensing@cisco.com\n profile \"CiscoTAC-1\"\n\
+      \  active\n  destination transport-method http\n!\n!\n!\n!\n!\nend"
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n18
+    image_definition: csr1000v-17-03-06
+    label: ASBR_M1_6_XE
+    node_definition: csr1000v
+    ram: null
+    tags: []
+    x: -240
+    y: 680
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet2
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet3
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet4
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet5
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet6
+        slot: 5
+        type: physical
+      - id: i7
+        label: GigabitEthernet7
+        slot: 6
+        type: physical
+      - id: i8
+        label: GigabitEthernet8
+        slot: 7
+        type: physical
+      - id: i9
+        label: GigabitEthernet9
+        slot: 8
+        type: physical
+      - id: i10
+        label: GigabitEthernet10
+        slot: 9
+        type: physical
+      - id: i11
+        label: GigabitEthernet11
+        slot: 10
+        type: physical
+      - id: i12
+        label: GigabitEthernet12
+        slot: 11
+        type: physical
+      - id: i13
+        label: GigabitEthernet13
+        slot: 12
+        type: physical
+      - id: i14
+        label: GigabitEthernet14
+        slot: 13
+        type: physical
+      - id: i15
+        label: GigabitEthernet15
+        slot: 14
+        type: physical
+      - id: i16
+        label: GigabitEthernet16
+        slot: 15
+        type: physical
+      - id: i17
+        label: GigabitEthernet17
+        slot: 16
+        type: physical
+      - id: i18
+        label: GigabitEthernet18
+        slot: 17
+        type: physical
+      - id: i19
+        label: GigabitEthernet19
+        slot: 18
+        type: physical
+      - id: i20
+        label: GigabitEthernet20
+        slot: 19
+        type: physical
+      - id: i21
+        label: GigabitEthernet21
+        slot: 20
+        type: physical
+      - id: i22
+        label: GigabitEthernet22
+        slot: 21
+        type: physical
+      - id: i23
+        label: GigabitEthernet23
+        slot: 22
+        type: physical
+      - id: i24
+        label: GigabitEthernet24
+        slot: 23
+        type: physical
+      - id: i25
+        label: GigabitEthernet25
+        slot: 24
+        type: physical
+      - id: i26
+        label: GigabitEthernet26
+        slot: 25
+        type: physical
+  - boot_disk_size: null
+    configuration: |2-
+
+      Mon Apr 24 04:57:35.837 UTC
+      Building configuration...
+      !! IOS XR Configuration 6.6.3
+      !! Last configuration change at Mon Apr 24 04:57:33 2023 by cisco
+      !
+      hostname ASBR_M1_5_XR
+      logging console disable
+      vrf MGMT
+       address-family ipv4 unicast
+       !
+      !
+      line console
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      line default
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      interface Loopback0
+       ipv4 address 10.0.3.5 255.255.255.255
+      !
+      interface MgmtEth0/0/CPU0/0
+       vrf MGMT
+       ipv4 address 192.168.1.115 255.255.255.0
+      !
+      interface GigabitEthernet0/0/0/0
+       ipv4 address 192.168.3.13 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/1
+       shutdown
+      !
+      interface GigabitEthernet0/0/0/2
+       ipv4 address 192.168.50.0 255.255.255.254
+      !
+      router static
+       vrf MGMT
+        address-family ipv4 unicast
+         0.0.0.0/0 192.168.1.254
+        !
+       !
+      !
+      router isis METRO1
+       net 49.0003.0003.0000.0005.00
+       address-family ipv4 unicast
+        metric-style wide
+       !
+       interface Loopback0
+        passive
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/0
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+      !
+      ssh server dscp 30
+      ssh server logging
+      ssh server rate-limit 100
+      ssh server capability netconf-xml
+      ssh server rekey-volume 4095
+      ssh server session-limit 100
+      ssh server v2
+      ssh server vrf MGMT
+      end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n19
+    image_definition: XRv 663
+    label: ASBR_M1_5_XR
+    node_definition: iosxrv
+    ram: null
+    tags: []
+    x: -240
+    y: 520
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: MgmtEth0/0/CPU0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/0/0/0
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/0/0/1
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/0/0/2
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration: "Building configuration...\n\nCurrent configuration : 6959 bytes\n\
+      !\n! Last configuration change at 05:01:05 UTC Mon Apr 24 2023\n!\nversion 17.3\n\
+      service timestamps debug datetime msec\nservice timestamps log datetime msec\n\
+      ! Call-home is enabled by Smart-Licensing.\nservice call-home\nplatform qfp\
+      \ utilization monitor load 80\nplatform punt-keepalive disable-kernel-core\n\
+      platform console serial\n!\nhostname P_C1_1_XE\n!\nboot-start-marker\nboot-end-marker\n\
+      !\n!\nvrf definition MGMT\n !\n address-family ipv4\n exit-address-family\n\
+      !\nno logging console\n!\nno aaa new-model\n!\n!\n!\n!\n!\n!\n!\nip domain name\
+      \ cisco.com\n!\n!\n!\nlogin on-success log\n!\n!\n!\n!\n!\n!\n!\nsubscriber\
+      \ templating\n!\n!\n!\n!\n!\n!\nmultilink bundle-name authenticated\n!\n!\n\
+      !\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\ncrypto pki trustpoint SLA-TrustPoint\n\
+      \ enrollment pkcs12\n revocation-check crl\n!\n!\ncrypto pki certificate chain\
+      \ SLA-TrustPoint\n certificate ca 01\n  30820321 30820209 A0030201 02020101\
+      \ 300D0609 2A864886 F70D0101 0B050030\n  32310E30 0C060355 040A1305 43697363\
+      \ 6F312030 1E060355 04031317 43697363\n  6F204C69 63656E73 696E6720 526F6F74\
+      \ 20434130 1E170D31 33303533 30313934\n  3834375A 170D3338 30353330 31393438\
+      \ 34375A30 32310E30 0C060355 040A1305\n  43697363 6F312030 1E060355 04031317\
+      \ 43697363 6F204C69 63656E73 696E6720\n  526F6F74 20434130 82012230 0D06092A\
+      \ 864886F7 0D010101 05000382 010F0030\n  82010A02 82010100 A6BCBD96 131E05F7\
+      \ 145EA72C 2CD686E6 17222EA1 F1EFF64D\n  CBB4C798 212AA147 C655D8D7 9471380D\
+      \ 8711441E 1AAF071A 9CAE6388 8A38E520\n  1C394D78 462EF239 C659F715 B98C0A59\
+      \ 5BBB5CBD 0CFEBEA3 700A8BF7 D8F256EE\n  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96\
+      \ 6FA68957 A2617DE7 104FDC5F EA2956AC\n  7390A3EB 2B5436AD C847A2C5 DAB553EB\
+      \ 69A9A535 58E9F3E3 C0BD23CF 58BD7188\n  68E69491 20F320E7 948E71D7 AE3BCC84\
+      \ F10684C7 4BC8E00F 539BA42B 42C68BB7\n  C7479096 B4CB2D62 EA2F505D C7B062A4\
+      \ 6811D95B E8250FC4 5D5D5FB8 8F27D191\n  C55F0D76 61F9A4CD 3D992327 A8BB03BD\
+      \ 4E6D7069 7CBADF8B DF5F4368 95135E44\n  DFC7C6CF 04DD7FD1 02030100 01A34230\
+      \ 40300E06 03551D0F 0101FF04 04030201\n  06300F06 03551D13 0101FF04 05300301\
+      \ 01FF301D 0603551D 0E041604 1449DC85\n  4B3D31E5 1B3E6A17 606AF333 3D3B4C73\
+      \ E8300D06 092A8648 86F70D01 010B0500\n  03820101 00507F24 D3932A66 86025D9F\
+      \ E838AE5C 6D4DF6B0 49631C78 240DA905\n  604EDCDE FF4FED2B 77FC460E CD636FDB\
+      \ DD44681E 3A5673AB 9093D3B1 6C9E3D8B\n  D98987BF E40CBD9E 1AECA0C2 2189BB5C\
+      \ 8FA85686 CD98B646 5575B146 8DFC66A8\n  467A3DF4 4D565700 6ADF0F0D CF835015\
+      \ 3C04FF7C 21E878AC 11BA9CD2 55A9232C\n  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB\
+      \ E973DE7F 5BDDEB86 C71E3B49 1765308B\n  5FB0DA06 B92AFE7F 494E8A9E 07B85737\
+      \ F3A58BE1 1A48A229 C37C1E69 39F08678\n  80DDCD16 D6BACECA EEBC7CF9 8428787B\
+      \ 35202CDC 60E4616A B623CDBD 230E3AFB\n  418616A9 4093E049 4D10AB75 27E86F73\
+      \ 932E35B5 8862FDAE 0275156F 719BB2F0\n  D697DF7F 28\n  \tquit\n!\nlicense udi\
+      \ pid CSR1000V sn 9RQ31QRAI59\ndiagnostic bootup level minimal\nmemory free\
+      \ low-watermark processor 71465\n!\n!\nspanning-tree extend system-id\n!\nusername\
+      \ cisco privilege 15 secret 9 $9$hLkcrF73Ltm3rE$q27UDYOeRrTwDcO76k2Jvo3mYP4wkeMKPqZisu77Sfo\n\
+      !\nredundancy\n!\n!\n!\n!\n!\n!\ncdp run\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n\
+      !\n!\n!\n!\n!\n!\n!\n!\ninterface Loopback0\n ip address 10.0.1.1 255.255.255.255\n\
+      \ ip router isis CORE1\n!\ninterface GigabitEthernet1\n ip address 192.168.1.0\
+      \ 255.255.255.254\n ip router isis CORE1\n negotiation auto\n cdp enable\n no\
+      \ mop enabled\n no mop sysid\n isis network point-to-point\n!\ninterface GigabitEthernet2\n\
+      \ ip address 192.168.1.2 255.255.255.254\n ip router isis CORE1\n negotiation\
+      \ auto\n no mop enabled\n no mop sysid\n isis network point-to-point\n!\ninterface\
+      \ GigabitEthernet3\n ip address 192.168.1.4 255.255.255.254\n ip router isis\
+      \ CORE1\n negotiation auto\n no mop enabled\n no mop sysid\n isis network point-to-point\n\
+      !\ninterface GigabitEthernet4\n ip address 192.168.1.6 255.255.255.254\n ip\
+      \ router isis CORE1\n negotiation auto\n no mop enabled\n no mop sysid\n isis\
+      \ network point-to-point\n!\ninterface GigabitEthernet5\n ip address 192.168.1.40\
+      \ 255.255.255.254\n ip router isis CORE1\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n isis network point-to-point\n!\ninterface GigabitEthernet6\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet7\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet8\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet9\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet10\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet11\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet12\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet13\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet14\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet15\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet16\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet17\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet18\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet19\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet20\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet21\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet22\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet23\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet24\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet25\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet26\n\
+      \ vrf forwarding MGMT\n ip address 192.168.1.11 255.255.255.0\n negotiation\
+      \ auto\n no mop enabled\n no mop sysid\n!\nrouter isis CORE1\n net 49.0001.0001.0000.0001.00\n\
+      \ metric-style wide\n!\nip forward-protocol nd\nno ip http server\nip http secure-server\n\
+      !\nip route vrf MGMT 0.0.0.0 0.0.0.0 GigabitEthernet26 192.168.1.254\nip ssh\
+      \ source-interface GigabitEthernet26\nip ssh version 2\n!\n!\n!\n!\n!\n!\n!\n\
+      control-plane\n!\n!\n!\n!\n!\n!\nline con 0\n exec-timeout 0 0\n stopbits 1\n\
+      line vty 0 4\n exec-timeout 0 0\n privilege level 15\n login local\n transport\
+      \ input ssh\n!\ncall-home\n ! If contact email address in call-home is configured\
+      \ as sch-smart-licensing@cisco.com\n ! the email address configured in Cisco\
+      \ Smart License Portal will be used as contact email address to send SCH notifications.\n\
+      \ contact-email-addr sch-smart-licensing@cisco.com\n profile \"CiscoTAC-1\"\n\
+      \  active\n  destination transport-method http\n!\n!\n!\n!\n!\nend"
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n20
+    image_definition: csr1000v-17-03-06
+    label: P_C1_1_XE
+    node_definition: csr1000v
+    ram: null
+    tags: []
+    x: -80
+    y: 160
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet2
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet3
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet4
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet5
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet6
+        slot: 5
+        type: physical
+      - id: i7
+        label: GigabitEthernet7
+        slot: 6
+        type: physical
+      - id: i8
+        label: GigabitEthernet8
+        slot: 7
+        type: physical
+      - id: i9
+        label: GigabitEthernet9
+        slot: 8
+        type: physical
+      - id: i10
+        label: GigabitEthernet10
+        slot: 9
+        type: physical
+      - id: i11
+        label: GigabitEthernet11
+        slot: 10
+        type: physical
+      - id: i12
+        label: GigabitEthernet12
+        slot: 11
+        type: physical
+      - id: i13
+        label: GigabitEthernet13
+        slot: 12
+        type: physical
+      - id: i14
+        label: GigabitEthernet14
+        slot: 13
+        type: physical
+      - id: i15
+        label: GigabitEthernet15
+        slot: 14
+        type: physical
+      - id: i16
+        label: GigabitEthernet16
+        slot: 15
+        type: physical
+      - id: i17
+        label: GigabitEthernet17
+        slot: 16
+        type: physical
+      - id: i18
+        label: GigabitEthernet18
+        slot: 17
+        type: physical
+      - id: i19
+        label: GigabitEthernet19
+        slot: 18
+        type: physical
+      - id: i20
+        label: GigabitEthernet20
+        slot: 19
+        type: physical
+      - id: i21
+        label: GigabitEthernet21
+        slot: 20
+        type: physical
+      - id: i22
+        label: GigabitEthernet22
+        slot: 21
+        type: physical
+      - id: i23
+        label: GigabitEthernet23
+        slot: 22
+        type: physical
+      - id: i24
+        label: GigabitEthernet24
+        slot: 23
+        type: physical
+      - id: i25
+        label: GigabitEthernet25
+        slot: 24
+        type: physical
+      - id: i26
+        label: GigabitEthernet26
+        slot: 25
+        type: physical
+  - boot_disk_size: null
+    configuration: "Building configuration...\n\nCurrent configuration : 6874 bytes\n\
+      !\n! Last configuration change at 05:01:28 UTC Mon Apr 24 2023\n!\nversion 17.3\n\
+      service timestamps debug datetime msec\nservice timestamps log datetime msec\n\
+      ! Call-home is enabled by Smart-Licensing.\nservice call-home\nplatform qfp\
+      \ utilization monitor load 80\nplatform punt-keepalive disable-kernel-core\n\
+      platform console serial\n!\nhostname P_C1_4_XE\n!\nboot-start-marker\nboot-end-marker\n\
+      !\n!\nvrf definition MGMT\n !\n address-family ipv4\n exit-address-family\n\
+      !\nno logging console\n!\nno aaa new-model\n!\n!\n!\n!\n!\n!\n!\nip domain name\
+      \ cisco.com\n!\n!\n!\nlogin on-success log\n!\n!\n!\n!\n!\n!\n!\nsubscriber\
+      \ templating\n!\n!\n!\n!\n!\n!\nmultilink bundle-name authenticated\n!\n!\n\
+      !\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\ncrypto pki trustpoint SLA-TrustPoint\n\
+      \ enrollment pkcs12\n revocation-check crl\n!\n!\ncrypto pki certificate chain\
+      \ SLA-TrustPoint\n certificate ca 01\n  30820321 30820209 A0030201 02020101\
+      \ 300D0609 2A864886 F70D0101 0B050030\n  32310E30 0C060355 040A1305 43697363\
+      \ 6F312030 1E060355 04031317 43697363\n  6F204C69 63656E73 696E6720 526F6F74\
+      \ 20434130 1E170D31 33303533 30313934\n  3834375A 170D3338 30353330 31393438\
+      \ 34375A30 32310E30 0C060355 040A1305\n  43697363 6F312030 1E060355 04031317\
+      \ 43697363 6F204C69 63656E73 696E6720\n  526F6F74 20434130 82012230 0D06092A\
+      \ 864886F7 0D010101 05000382 010F0030\n  82010A02 82010100 A6BCBD96 131E05F7\
+      \ 145EA72C 2CD686E6 17222EA1 F1EFF64D\n  CBB4C798 212AA147 C655D8D7 9471380D\
+      \ 8711441E 1AAF071A 9CAE6388 8A38E520\n  1C394D78 462EF239 C659F715 B98C0A59\
+      \ 5BBB5CBD 0CFEBEA3 700A8BF7 D8F256EE\n  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96\
+      \ 6FA68957 A2617DE7 104FDC5F EA2956AC\n  7390A3EB 2B5436AD C847A2C5 DAB553EB\
+      \ 69A9A535 58E9F3E3 C0BD23CF 58BD7188\n  68E69491 20F320E7 948E71D7 AE3BCC84\
+      \ F10684C7 4BC8E00F 539BA42B 42C68BB7\n  C7479096 B4CB2D62 EA2F505D C7B062A4\
+      \ 6811D95B E8250FC4 5D5D5FB8 8F27D191\n  C55F0D76 61F9A4CD 3D992327 A8BB03BD\
+      \ 4E6D7069 7CBADF8B DF5F4368 95135E44\n  DFC7C6CF 04DD7FD1 02030100 01A34230\
+      \ 40300E06 03551D0F 0101FF04 04030201\n  06300F06 03551D13 0101FF04 05300301\
+      \ 01FF301D 0603551D 0E041604 1449DC85\n  4B3D31E5 1B3E6A17 606AF333 3D3B4C73\
+      \ E8300D06 092A8648 86F70D01 010B0500\n  03820101 00507F24 D3932A66 86025D9F\
+      \ E838AE5C 6D4DF6B0 49631C78 240DA905\n  604EDCDE FF4FED2B 77FC460E CD636FDB\
+      \ DD44681E 3A5673AB 9093D3B1 6C9E3D8B\n  D98987BF E40CBD9E 1AECA0C2 2189BB5C\
+      \ 8FA85686 CD98B646 5575B146 8DFC66A8\n  467A3DF4 4D565700 6ADF0F0D CF835015\
+      \ 3C04FF7C 21E878AC 11BA9CD2 55A9232C\n  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB\
+      \ E973DE7F 5BDDEB86 C71E3B49 1765308B\n  5FB0DA06 B92AFE7F 494E8A9E 07B85737\
+      \ F3A58BE1 1A48A229 C37C1E69 39F08678\n  80DDCD16 D6BACECA EEBC7CF9 8428787B\
+      \ 35202CDC 60E4616A B623CDBD 230E3AFB\n  418616A9 4093E049 4D10AB75 27E86F73\
+      \ 932E35B5 8862FDAE 0275156F 719BB2F0\n  D697DF7F 28\n  \tquit\n!\nlicense udi\
+      \ pid CSR1000V sn 9EE0HF8QO56\ndiagnostic bootup level minimal\nmemory free\
+      \ low-watermark processor 71465\n!\n!\nspanning-tree extend system-id\n!\nusername\
+      \ cisco privilege 15 secret 9 $9$H/ubFKqmhS/B6E$qqQCVqTwuCbDbh.LCSvXrIaCZLV5r8bWDpaEvvXg2QA\n\
+      !\nredundancy\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n\
+      !\n!\n!\n!\n!\ninterface Loopback0\n ip address 10.0.1.4 255.255.255.255\n ip\
+      \ router isis CORE1\n!\ninterface GigabitEthernet1\n ip address 192.168.1.36\
+      \ 255.255.255.254\n ip router isis CORE1\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n isis network point-to-point\n!\ninterface GigabitEthernet2\n\
+      \ ip address 192.168.1.35 255.255.255.254\n ip router isis CORE1\n negotiation\
+      \ auto\n no mop enabled\n no mop sysid\n isis network point-to-point\n!\ninterface\
+      \ GigabitEthernet3\n ip address 192.168.1.30 255.255.255.254\n ip router isis\
+      \ CORE1\n negotiation auto\n no mop enabled\n no mop sysid\n isis network point-to-point\n\
+      !\ninterface GigabitEthernet4\n ip address 192.168.1.7 255.255.255.254\n ip\
+      \ router isis CORE1\n negotiation auto\n no mop enabled\n no mop sysid\n isis\
+      \ network point-to-point\n!\ninterface GigabitEthernet5\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet6\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet7\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet8\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet9\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet10\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet11\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet12\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet13\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet14\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet15\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet16\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet17\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet18\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet19\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet20\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet21\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet22\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet23\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet24\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet25\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet26\n\
+      \ vrf forwarding MGMT\n ip address 192.168.1.14 255.255.255.0\n negotiation\
+      \ auto\n no mop enabled\n no mop sysid\n!\nrouter isis CORE1\n net 49.0001.0001.0000.0004.00\n\
+      \ metric-style wide\n!\nip forward-protocol nd\nno ip http server\nip http secure-server\n\
+      !\nip route vrf MGMT 0.0.0.0 0.0.0.0 GigabitEthernet26 192.168.1.254\nip ssh\
+      \ source-interface GigabitEthernet26\nip ssh version 2\n!\n!\n!\n!\n!\n!\n!\n\
+      control-plane\n!\n!\n!\n!\n!\n!\nline con 0\n exec-timeout 0 0\n stopbits 1\n\
+      line vty 0 4\n exec-timeout 0 0\n privilege level 15\n login local\n transport\
+      \ input ssh\n!\ncall-home\n ! If contact email address in call-home is configured\
+      \ as sch-smart-licensing@cisco.com\n ! the email address configured in Cisco\
+      \ Smart License Portal will be used as contact email address to send SCH notifications.\n\
+      \ contact-email-addr sch-smart-licensing@cisco.com\n profile \"CiscoTAC-1\"\n\
+      \  active\n  destination transport-method http\n!\n!\n!\n!\n!\nend"
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n21
+    image_definition: csr1000v-17-03-06
+    label: P_C1_4_XE
+    node_definition: csr1000v
+    ram: null
+    tags: []
+    x: 80
+    y: 320
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet2
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet3
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet4
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet5
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet6
+        slot: 5
+        type: physical
+      - id: i7
+        label: GigabitEthernet7
+        slot: 6
+        type: physical
+      - id: i8
+        label: GigabitEthernet8
+        slot: 7
+        type: physical
+      - id: i9
+        label: GigabitEthernet9
+        slot: 8
+        type: physical
+      - id: i10
+        label: GigabitEthernet10
+        slot: 9
+        type: physical
+      - id: i11
+        label: GigabitEthernet11
+        slot: 10
+        type: physical
+      - id: i12
+        label: GigabitEthernet12
+        slot: 11
+        type: physical
+      - id: i13
+        label: GigabitEthernet13
+        slot: 12
+        type: physical
+      - id: i14
+        label: GigabitEthernet14
+        slot: 13
+        type: physical
+      - id: i15
+        label: GigabitEthernet15
+        slot: 14
+        type: physical
+      - id: i16
+        label: GigabitEthernet16
+        slot: 15
+        type: physical
+      - id: i17
+        label: GigabitEthernet17
+        slot: 16
+        type: physical
+      - id: i18
+        label: GigabitEthernet18
+        slot: 17
+        type: physical
+      - id: i19
+        label: GigabitEthernet19
+        slot: 18
+        type: physical
+      - id: i20
+        label: GigabitEthernet20
+        slot: 19
+        type: physical
+      - id: i21
+        label: GigabitEthernet21
+        slot: 20
+        type: physical
+      - id: i22
+        label: GigabitEthernet22
+        slot: 21
+        type: physical
+      - id: i23
+        label: GigabitEthernet23
+        slot: 22
+        type: physical
+      - id: i24
+        label: GigabitEthernet24
+        slot: 23
+        type: physical
+      - id: i25
+        label: GigabitEthernet25
+        slot: 24
+        type: physical
+      - id: i26
+        label: GigabitEthernet26
+        slot: 25
+        type: physical
+  - boot_disk_size: null
+    configuration: "Building configuration...\n\nCurrent configuration : 6923 bytes\n\
+      !\n! Last configuration change at 05:02:17 UTC Mon Apr 24 2023\n!\nversion 17.3\n\
+      service timestamps debug datetime msec\nservice timestamps log datetime msec\n\
+      ! Call-home is enabled by Smart-Licensing.\nservice call-home\nplatform qfp\
+      \ utilization monitor load 80\nplatform punt-keepalive disable-kernel-core\n\
+      platform console serial\n!\nhostname ABR_C1_8_XE\n!\nboot-start-marker\nboot-end-marker\n\
+      !\n!\nvrf definition MGMT\n !\n address-family ipv4\n exit-address-family\n\
+      !\nno logging console\n!\nno aaa new-model\n!\n!\n!\n!\n!\n!\n!\nip domain name\
+      \ cisco.com\n!\n!\n!\nlogin on-success log\n!\n!\n!\n!\n!\n!\n!\nsubscriber\
+      \ templating\n!\n!\n!\n!\n!\n!\nmultilink bundle-name authenticated\n!\n!\n\
+      !\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\ncrypto pki trustpoint SLA-TrustPoint\n\
+      \ enrollment pkcs12\n revocation-check crl\n!\n!\ncrypto pki certificate chain\
+      \ SLA-TrustPoint\n certificate ca 01\n  30820321 30820209 A0030201 02020101\
+      \ 300D0609 2A864886 F70D0101 0B050030\n  32310E30 0C060355 040A1305 43697363\
+      \ 6F312030 1E060355 04031317 43697363\n  6F204C69 63656E73 696E6720 526F6F74\
+      \ 20434130 1E170D31 33303533 30313934\n  3834375A 170D3338 30353330 31393438\
+      \ 34375A30 32310E30 0C060355 040A1305\n  43697363 6F312030 1E060355 04031317\
+      \ 43697363 6F204C69 63656E73 696E6720\n  526F6F74 20434130 82012230 0D06092A\
+      \ 864886F7 0D010101 05000382 010F0030\n  82010A02 82010100 A6BCBD96 131E05F7\
+      \ 145EA72C 2CD686E6 17222EA1 F1EFF64D\n  CBB4C798 212AA147 C655D8D7 9471380D\
+      \ 8711441E 1AAF071A 9CAE6388 8A38E520\n  1C394D78 462EF239 C659F715 B98C0A59\
+      \ 5BBB5CBD 0CFEBEA3 700A8BF7 D8F256EE\n  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96\
+      \ 6FA68957 A2617DE7 104FDC5F EA2956AC\n  7390A3EB 2B5436AD C847A2C5 DAB553EB\
+      \ 69A9A535 58E9F3E3 C0BD23CF 58BD7188\n  68E69491 20F320E7 948E71D7 AE3BCC84\
+      \ F10684C7 4BC8E00F 539BA42B 42C68BB7\n  C7479096 B4CB2D62 EA2F505D C7B062A4\
+      \ 6811D95B E8250FC4 5D5D5FB8 8F27D191\n  C55F0D76 61F9A4CD 3D992327 A8BB03BD\
+      \ 4E6D7069 7CBADF8B DF5F4368 95135E44\n  DFC7C6CF 04DD7FD1 02030100 01A34230\
+      \ 40300E06 03551D0F 0101FF04 04030201\n  06300F06 03551D13 0101FF04 05300301\
+      \ 01FF301D 0603551D 0E041604 1449DC85\n  4B3D31E5 1B3E6A17 606AF333 3D3B4C73\
+      \ E8300D06 092A8648 86F70D01 010B0500\n  03820101 00507F24 D3932A66 86025D9F\
+      \ E838AE5C 6D4DF6B0 49631C78 240DA905\n  604EDCDE FF4FED2B 77FC460E CD636FDB\
+      \ DD44681E 3A5673AB 9093D3B1 6C9E3D8B\n  D98987BF E40CBD9E 1AECA0C2 2189BB5C\
+      \ 8FA85686 CD98B646 5575B146 8DFC66A8\n  467A3DF4 4D565700 6ADF0F0D CF835015\
+      \ 3C04FF7C 21E878AC 11BA9CD2 55A9232C\n  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB\
+      \ E973DE7F 5BDDEB86 C71E3B49 1765308B\n  5FB0DA06 B92AFE7F 494E8A9E 07B85737\
+      \ F3A58BE1 1A48A229 C37C1E69 39F08678\n  80DDCD16 D6BACECA EEBC7CF9 8428787B\
+      \ 35202CDC 60E4616A B623CDBD 230E3AFB\n  418616A9 4093E049 4D10AB75 27E86F73\
+      \ 932E35B5 8862FDAE 0275156F 719BB2F0\n  D697DF7F 28\n  \tquit\n!\nlicense udi\
+      \ pid CSR1000V sn 9L4YHLBHD22\ndiagnostic bootup level minimal\nmemory free\
+      \ low-watermark processor 71465\n!\n!\nspanning-tree extend system-id\n!\nusername\
+      \ cisco privilege 15 secret 9 $9$7bPcRhjT/rDUcE$kq85FZY.WNwKIaJdEVVkyWAndMMqQ1QLjgUqUcbCxv.\n\
+      !\nredundancy\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n\
+      !\n!\n!\n!\n!\ninterface Loopback0\n ip address 10.0.1.8 255.255.255.255\n ip\
+      \ router isis CORE1\n ip ospf 1 area 0\n!\ninterface GigabitEthernet1\n ip address\
+      \ 192.168.4.4 255.255.255.254\n ip ospf network point-to-point\n ip ospf 1 area\
+      \ 0\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet2\n\
+      \ ip address 192.168.4.2 255.255.255.254\n ip ospf network point-to-point\n\
+      \ ip ospf 1 area 0\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet3\n ip address 192.168.4.42 255.255.255.254\n ip ospf network\
+      \ point-to-point\n ip ospf 1 area 0\n negotiation auto\n no mop enabled\n no\
+      \ mop sysid\n!\ninterface GigabitEthernet4\n no ip address\n shutdown\n negotiation\
+      \ auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet5\n ip address\
+      \ 192.168.1.37 255.255.255.254\n ip router isis CORE1\n negotiation auto\n no\
+      \ mop enabled\n no mop sysid\n isis network point-to-point\n!\ninterface GigabitEthernet6\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet7\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet8\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet9\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet10\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet11\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet12\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet13\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet14\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet15\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet16\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet17\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet18\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet19\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet20\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet21\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet22\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet23\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet24\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet25\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet26\n\
+      \ vrf forwarding MGMT\n ip address 192.168.1.18 255.255.255.0\n negotiation\
+      \ auto\n no mop enabled\n no mop sysid\n!\nrouter ospf 1\n router-id 10.0.1.8\n\
+      !\nrouter isis CORE1\n net 49.0001.0001.0000.0008.00\n metric-style wide\n!\n\
+      ip forward-protocol nd\nno ip http server\nip http secure-server\n!\nip route\
+      \ vrf MGMT 0.0.0.0 0.0.0.0 GigabitEthernet26 192.168.1.254\nip ssh source-interface\
+      \ GigabitEthernet26\nip ssh version 2\n!\n!\n!\n!\n!\n!\n!\ncontrol-plane\n\
+      !\n!\n!\n!\n!\n!\nline con 0\n exec-timeout 0 0\n stopbits 1\nline vty 0 4\n\
+      \ exec-timeout 0 0\n privilege level 15\n login local\n transport input ssh\n\
+      !\ncall-home\n ! If contact email address in call-home is configured as sch-smart-licensing@cisco.com\n\
+      \ ! the email address configured in Cisco Smart License Portal will be used\
+      \ as contact email address to send SCH notifications.\n contact-email-addr sch-smart-licensing@cisco.com\n\
+      \ profile \"CiscoTAC-1\"\n  active\n  destination transport-method http\n!\n\
+      !\n!\n!\n!\nend"
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n22
+    image_definition: csr1000v-17-03-06
+    label: ABR_C1_8_XE
+    node_definition: csr1000v
+    ram: null
+    tags: []
+    x: 240
+    y: 320
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet2
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet3
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet4
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet5
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet6
+        slot: 5
+        type: physical
+      - id: i7
+        label: GigabitEthernet7
+        slot: 6
+        type: physical
+      - id: i8
+        label: GigabitEthernet8
+        slot: 7
+        type: physical
+      - id: i9
+        label: GigabitEthernet9
+        slot: 8
+        type: physical
+      - id: i10
+        label: GigabitEthernet10
+        slot: 9
+        type: physical
+      - id: i11
+        label: GigabitEthernet11
+        slot: 10
+        type: physical
+      - id: i12
+        label: GigabitEthernet12
+        slot: 11
+        type: physical
+      - id: i13
+        label: GigabitEthernet13
+        slot: 12
+        type: physical
+      - id: i14
+        label: GigabitEthernet14
+        slot: 13
+        type: physical
+      - id: i15
+        label: GigabitEthernet15
+        slot: 14
+        type: physical
+      - id: i16
+        label: GigabitEthernet16
+        slot: 15
+        type: physical
+      - id: i17
+        label: GigabitEthernet17
+        slot: 16
+        type: physical
+      - id: i18
+        label: GigabitEthernet18
+        slot: 17
+        type: physical
+      - id: i19
+        label: GigabitEthernet19
+        slot: 18
+        type: physical
+      - id: i20
+        label: GigabitEthernet20
+        slot: 19
+        type: physical
+      - id: i21
+        label: GigabitEthernet21
+        slot: 20
+        type: physical
+      - id: i22
+        label: GigabitEthernet22
+        slot: 21
+        type: physical
+      - id: i23
+        label: GigabitEthernet23
+        slot: 22
+        type: physical
+      - id: i24
+        label: GigabitEthernet24
+        slot: 23
+        type: physical
+      - id: i25
+        label: GigabitEthernet25
+        slot: 24
+        type: physical
+      - id: i26
+        label: GigabitEthernet26
+        slot: 25
+        type: physical
+  - boot_disk_size: null
+    configuration: "Building configuration...\n\nCurrent configuration : 6744 bytes\n\
+      !\n! Last configuration change at 05:01:53 UTC Mon Apr 24 2023\n!\nversion 17.3\n\
+      service timestamps debug datetime msec\nservice timestamps log datetime msec\n\
+      ! Call-home is enabled by Smart-Licensing.\nservice call-home\nplatform qfp\
+      \ utilization monitor load 80\nplatform punt-keepalive disable-kernel-core\n\
+      platform console serial\n!\nhostname RR_C1_254_XE\n!\nboot-start-marker\nboot-end-marker\n\
+      !\n!\nvrf definition MGMT\n !\n address-family ipv4\n exit-address-family\n\
+      !\nno logging console\n!\nno aaa new-model\n!\n!\n!\n!\n!\n!\n!\nip domain name\
+      \ cisco.com\n!\n!\n!\nlogin on-success log\n!\n!\n!\n!\n!\n!\n!\nsubscriber\
+      \ templating\n!\n!\n!\n!\n!\n!\nmultilink bundle-name authenticated\n!\n!\n\
+      !\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\ncrypto pki trustpoint SLA-TrustPoint\n\
+      \ enrollment pkcs12\n revocation-check crl\n!\n!\ncrypto pki certificate chain\
+      \ SLA-TrustPoint\n certificate ca 01\n  30820321 30820209 A0030201 02020101\
+      \ 300D0609 2A864886 F70D0101 0B050030\n  32310E30 0C060355 040A1305 43697363\
+      \ 6F312030 1E060355 04031317 43697363\n  6F204C69 63656E73 696E6720 526F6F74\
+      \ 20434130 1E170D31 33303533 30313934\n  3834375A 170D3338 30353330 31393438\
+      \ 34375A30 32310E30 0C060355 040A1305\n  43697363 6F312030 1E060355 04031317\
+      \ 43697363 6F204C69 63656E73 696E6720\n  526F6F74 20434130 82012230 0D06092A\
+      \ 864886F7 0D010101 05000382 010F0030\n  82010A02 82010100 A6BCBD96 131E05F7\
+      \ 145EA72C 2CD686E6 17222EA1 F1EFF64D\n  CBB4C798 212AA147 C655D8D7 9471380D\
+      \ 8711441E 1AAF071A 9CAE6388 8A38E520\n  1C394D78 462EF239 C659F715 B98C0A59\
+      \ 5BBB5CBD 0CFEBEA3 700A8BF7 D8F256EE\n  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96\
+      \ 6FA68957 A2617DE7 104FDC5F EA2956AC\n  7390A3EB 2B5436AD C847A2C5 DAB553EB\
+      \ 69A9A535 58E9F3E3 C0BD23CF 58BD7188\n  68E69491 20F320E7 948E71D7 AE3BCC84\
+      \ F10684C7 4BC8E00F 539BA42B 42C68BB7\n  C7479096 B4CB2D62 EA2F505D C7B062A4\
+      \ 6811D95B E8250FC4 5D5D5FB8 8F27D191\n  C55F0D76 61F9A4CD 3D992327 A8BB03BD\
+      \ 4E6D7069 7CBADF8B DF5F4368 95135E44\n  DFC7C6CF 04DD7FD1 02030100 01A34230\
+      \ 40300E06 03551D0F 0101FF04 04030201\n  06300F06 03551D13 0101FF04 05300301\
+      \ 01FF301D 0603551D 0E041604 1449DC85\n  4B3D31E5 1B3E6A17 606AF333 3D3B4C73\
+      \ E8300D06 092A8648 86F70D01 010B0500\n  03820101 00507F24 D3932A66 86025D9F\
+      \ E838AE5C 6D4DF6B0 49631C78 240DA905\n  604EDCDE FF4FED2B 77FC460E CD636FDB\
+      \ DD44681E 3A5673AB 9093D3B1 6C9E3D8B\n  D98987BF E40CBD9E 1AECA0C2 2189BB5C\
+      \ 8FA85686 CD98B646 5575B146 8DFC66A8\n  467A3DF4 4D565700 6ADF0F0D CF835015\
+      \ 3C04FF7C 21E878AC 11BA9CD2 55A9232C\n  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB\
+      \ E973DE7F 5BDDEB86 C71E3B49 1765308B\n  5FB0DA06 B92AFE7F 494E8A9E 07B85737\
+      \ F3A58BE1 1A48A229 C37C1E69 39F08678\n  80DDCD16 D6BACECA EEBC7CF9 8428787B\
+      \ 35202CDC 60E4616A B623CDBD 230E3AFB\n  418616A9 4093E049 4D10AB75 27E86F73\
+      \ 932E35B5 8862FDAE 0275156F 719BB2F0\n  D697DF7F 28\n  \tquit\n!\nlicense udi\
+      \ pid CSR1000V sn 98LD4EE3M8W\ndiagnostic bootup level minimal\nmemory free\
+      \ low-watermark processor 71465\n!\n!\nspanning-tree extend system-id\n!\nusername\
+      \ cisco privilege 15 secret 9 $9$8WHyr6R1GLD5gE$cLXJLIIAebwI6nsP3Kg2HhVzl3KlCthNiWrgSM2upBo\n\
+      !\nredundancy\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n\
+      !\n!\n!\n!\n!\ninterface Loopback0\n ip address 10.0.1.254 255.255.255.255\n\
+      \ ip router isis CORE1\n!\ninterface GigabitEthernet1\n ip address 192.168.1.41\
+      \ 255.255.255.254\n ip router isis CORE1\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n isis network point-to-point\n!\ninterface GigabitEthernet2\n\
+      \ ip address 192.168.1.43 255.255.255.254\n ip router isis CORE1\n negotiation\
+      \ auto\n no mop enabled\n no mop sysid\n isis network point-to-point\n!\ninterface\
+      \ GigabitEthernet3\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet4\n no ip address\n shutdown\n negotiation\
+      \ auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet5\n no ip\
+      \ address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\n\
+      interface GigabitEthernet6\n no ip address\n shutdown\n negotiation auto\n no\
+      \ mop enabled\n no mop sysid\n!\ninterface GigabitEthernet7\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet8\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet9\n no ip address\n shutdown\n negotiation\
+      \ auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet10\n no\
+      \ ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet11\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet12\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet13\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet14\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet15\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet16\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet17\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet18\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet19\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet20\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet21\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet22\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet23\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet24\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet25\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet26\n vrf forwarding MGMT\n ip address 192.168.1.19\
+      \ 255.255.255.0\n negotiation auto\n no mop enabled\n no mop sysid\n!\nrouter\
+      \ isis CORE1\n net 49.0001.0001.0000.0254.00\n metric-style wide\n!\nip forward-protocol\
+      \ nd\nno ip http server\nip http secure-server\n!\nip route vrf MGMT 0.0.0.0\
+      \ 0.0.0.0 GigabitEthernet26 192.168.1.254\nip ssh source-interface GigabitEthernet26\n\
+      ip ssh version 2\n!\n!\n!\n!\n!\n!\n!\ncontrol-plane\n!\n!\n!\n!\n!\n!\nline\
+      \ con 0\n exec-timeout 0 0\n stopbits 1\nline vty 0 4\n exec-timeout 0 0\n privilege\
+      \ level 15\n login local\n transport input ssh\n!\ncall-home\n ! If contact\
+      \ email address in call-home is configured as sch-smart-licensing@cisco.com\n\
+      \ ! the email address configured in Cisco Smart License Portal will be used\
+      \ as contact email address to send SCH notifications.\n contact-email-addr sch-smart-licensing@cisco.com\n\
+      \ profile \"CiscoTAC-1\"\n  active\n  destination transport-method http\n!\n\
+      !\n!\n!\n!\nend"
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n23
+    image_definition: csr1000v-17-03-06
+    label: RR_C1_254_XE
+    node_definition: csr1000v
+    ram: null
+    tags: []
+    x: 0
+    y: 80
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet2
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet3
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet4
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet5
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet6
+        slot: 5
+        type: physical
+      - id: i7
+        label: GigabitEthernet7
+        slot: 6
+        type: physical
+      - id: i8
+        label: GigabitEthernet8
+        slot: 7
+        type: physical
+      - id: i9
+        label: GigabitEthernet9
+        slot: 8
+        type: physical
+      - id: i10
+        label: GigabitEthernet10
+        slot: 9
+        type: physical
+      - id: i11
+        label: GigabitEthernet11
+        slot: 10
+        type: physical
+      - id: i12
+        label: GigabitEthernet12
+        slot: 11
+        type: physical
+      - id: i13
+        label: GigabitEthernet13
+        slot: 12
+        type: physical
+      - id: i14
+        label: GigabitEthernet14
+        slot: 13
+        type: physical
+      - id: i15
+        label: GigabitEthernet15
+        slot: 14
+        type: physical
+      - id: i16
+        label: GigabitEthernet16
+        slot: 15
+        type: physical
+      - id: i17
+        label: GigabitEthernet17
+        slot: 16
+        type: physical
+      - id: i18
+        label: GigabitEthernet18
+        slot: 17
+        type: physical
+      - id: i19
+        label: GigabitEthernet19
+        slot: 18
+        type: physical
+      - id: i20
+        label: GigabitEthernet20
+        slot: 19
+        type: physical
+      - id: i21
+        label: GigabitEthernet21
+        slot: 20
+        type: physical
+      - id: i22
+        label: GigabitEthernet22
+        slot: 21
+        type: physical
+      - id: i23
+        label: GigabitEthernet23
+        slot: 22
+        type: physical
+      - id: i24
+        label: GigabitEthernet24
+        slot: 23
+        type: physical
+      - id: i25
+        label: GigabitEthernet25
+        slot: 24
+        type: physical
+      - id: i26
+        label: GigabitEthernet26
+        slot: 25
+        type: physical
+  - boot_disk_size: null
+    configuration: |2-
+
+      Mon Apr 24 04:57:01.543 UTC
+      Building configuration...
+      !! IOS XR Configuration 6.6.3
+      !! Last configuration change at Mon Apr 24 04:56:59 2023 by cisco
+      !
+      hostname RR_M1_254_XR
+      logging console disable
+      vrf MGMT
+       address-family ipv4 unicast
+       !
+      !
+      line console
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      line default
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      interface Loopback0
+       ipv4 address 10.0.3.254 255.255.255.255
+      !
+      interface MgmtEth0/0/CPU0/0
+       vrf MGMT
+       ipv4 address 192.168.1.117 255.255.255.0
+      !
+      interface GigabitEthernet0/0/0/0
+       ipv4 address 192.168.3.41 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/1
+       ipv4 address 192.168.3.43 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/2
+       shutdown
+      !
+      router static
+       vrf MGMT
+        address-family ipv4 unicast
+         0.0.0.0/0 192.168.1.254
+        !
+       !
+      !
+      router isis METRO1
+       net 49.0003.0003.0000.0254.00
+       address-family ipv4 unicast
+        metric-style wide
+       !
+       interface Loopback0
+        passive
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/0
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/1
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+      !
+      ssh server dscp 30
+      ssh server logging
+      ssh server rate-limit 100
+      ssh server capability netconf-xml
+      ssh server rekey-volume 4095
+      ssh server session-limit 100
+      ssh server v2
+      ssh server vrf MGMT
+      end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n24
+    image_definition: XRv 663
+    label: RR_M1_254_XR
+    node_definition: iosxrv
+    ram: null
+    tags: []
+    x: -400
+    y: 440
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: MgmtEth0/0/CPU0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/0/0/0
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/0/0/1
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/0/0/2
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration: "Building configuration...\n\nCurrent configuration : 6689 bytes\n\
+      !\n! Last configuration change at 04:58:01 UTC Mon Apr 24 2023\n!\nversion 17.3\n\
+      service timestamps debug datetime msec\nservice timestamps log datetime msec\n\
+      ! Call-home is enabled by Smart-Licensing.\nservice call-home\nplatform qfp\
+      \ utilization monitor load 80\nplatform punt-keepalive disable-kernel-core\n\
+      platform console serial\n!\nhostname ASBR_C2_2_XE\n!\nboot-start-marker\nboot-end-marker\n\
+      !\n!\nvrf definition MGMT\n !\n address-family ipv4\n exit-address-family\n\
+      !\nno logging console\n!\nno aaa new-model\n!\n!\n!\n!\n!\n!\n!\nip domain name\
+      \ cisco.com\n!\n!\n!\nlogin on-success log\n!\n!\n!\n!\n!\n!\n!\nsubscriber\
+      \ templating\n!\n!\n!\n!\n!\n!\nmultilink bundle-name authenticated\n!\n!\n\
+      !\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\ncrypto pki trustpoint SLA-TrustPoint\n\
+      \ enrollment pkcs12\n revocation-check crl\n!\n!\ncrypto pki certificate chain\
+      \ SLA-TrustPoint\n certificate ca 01\n  30820321 30820209 A0030201 02020101\
+      \ 300D0609 2A864886 F70D0101 0B050030\n  32310E30 0C060355 040A1305 43697363\
+      \ 6F312030 1E060355 04031317 43697363\n  6F204C69 63656E73 696E6720 526F6F74\
+      \ 20434130 1E170D31 33303533 30313934\n  3834375A 170D3338 30353330 31393438\
+      \ 34375A30 32310E30 0C060355 040A1305\n  43697363 6F312030 1E060355 04031317\
+      \ 43697363 6F204C69 63656E73 696E6720\n  526F6F74 20434130 82012230 0D06092A\
+      \ 864886F7 0D010101 05000382 010F0030\n  82010A02 82010100 A6BCBD96 131E05F7\
+      \ 145EA72C 2CD686E6 17222EA1 F1EFF64D\n  CBB4C798 212AA147 C655D8D7 9471380D\
+      \ 8711441E 1AAF071A 9CAE6388 8A38E520\n  1C394D78 462EF239 C659F715 B98C0A59\
+      \ 5BBB5CBD 0CFEBEA3 700A8BF7 D8F256EE\n  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96\
+      \ 6FA68957 A2617DE7 104FDC5F EA2956AC\n  7390A3EB 2B5436AD C847A2C5 DAB553EB\
+      \ 69A9A535 58E9F3E3 C0BD23CF 58BD7188\n  68E69491 20F320E7 948E71D7 AE3BCC84\
+      \ F10684C7 4BC8E00F 539BA42B 42C68BB7\n  C7479096 B4CB2D62 EA2F505D C7B062A4\
+      \ 6811D95B E8250FC4 5D5D5FB8 8F27D191\n  C55F0D76 61F9A4CD 3D992327 A8BB03BD\
+      \ 4E6D7069 7CBADF8B DF5F4368 95135E44\n  DFC7C6CF 04DD7FD1 02030100 01A34230\
+      \ 40300E06 03551D0F 0101FF04 04030201\n  06300F06 03551D13 0101FF04 05300301\
+      \ 01FF301D 0603551D 0E041604 1449DC85\n  4B3D31E5 1B3E6A17 606AF333 3D3B4C73\
+      \ E8300D06 092A8648 86F70D01 010B0500\n  03820101 00507F24 D3932A66 86025D9F\
+      \ E838AE5C 6D4DF6B0 49631C78 240DA905\n  604EDCDE FF4FED2B 77FC460E CD636FDB\
+      \ DD44681E 3A5673AB 9093D3B1 6C9E3D8B\n  D98987BF E40CBD9E 1AECA0C2 2189BB5C\
+      \ 8FA85686 CD98B646 5575B146 8DFC66A8\n  467A3DF4 4D565700 6ADF0F0D CF835015\
+      \ 3C04FF7C 21E878AC 11BA9CD2 55A9232C\n  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB\
+      \ E973DE7F 5BDDEB86 C71E3B49 1765308B\n  5FB0DA06 B92AFE7F 494E8A9E 07B85737\
+      \ F3A58BE1 1A48A229 C37C1E69 39F08678\n  80DDCD16 D6BACECA EEBC7CF9 8428787B\
+      \ 35202CDC 60E4616A B623CDBD 230E3AFB\n  418616A9 4093E049 4D10AB75 27E86F73\
+      \ 932E35B5 8862FDAE 0275156F 719BB2F0\n  D697DF7F 28\n  \tquit\n!\nlicense udi\
+      \ pid CSR1000V sn 91Q15A3QSR8\ndiagnostic bootup level minimal\nmemory free\
+      \ low-watermark processor 71465\n!\n!\nspanning-tree extend system-id\n!\nusername\
+      \ cisco privilege 15 secret 9 $9$pRWKmkZ9squKaE$hsFlzqyxdbOCAMaOSg5EV26/X33ddAC8CzIAjSOAVCk\n\
+      !\nredundancy\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n\
+      !\n!\n!\n!\n!\ninterface Loopback0\n ip address 10.0.2.2 255.255.255.255\n ip\
+      \ router isis CORE2\n!\ninterface GigabitEthernet1\n ip address 192.168.50.1\
+      \ 255.255.255.254\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet2\n ip address 192.168.2.0 255.255.255.254\n ip router isis\
+      \ CORE2\n negotiation auto\n no mop enabled\n no mop sysid\n isis network point-to-point\n\
+      !\ninterface GigabitEthernet3\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet4\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet5\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet6\n no ip address\n shutdown\n negotiation\
+      \ auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet7\n no ip\
+      \ address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\n\
+      interface GigabitEthernet8\n no ip address\n shutdown\n negotiation auto\n no\
+      \ mop enabled\n no mop sysid\n!\ninterface GigabitEthernet9\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet10\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet11\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet12\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet13\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet14\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet15\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet16\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet17\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet18\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet19\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet20\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet21\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet22\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet23\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet24\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet25\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet26\n vrf forwarding MGMT\n ip address\
+      \ 192.168.1.22 255.255.255.0\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\nrouter isis CORE2\n net 49.0002.0002.0000.0002.00\n metric-style wide\n!\n\
+      ip forward-protocol nd\nno ip http server\nip http secure-server\n!\nip route\
+      \ vrf MGMT 0.0.0.0 0.0.0.0 GigabitEthernet26 192.168.1.254\nip ssh source-interface\
+      \ GigabitEthernet26\nip ssh version 2\n!\n!\n!\n!\n!\n!\n!\ncontrol-plane\n\
+      !\n!\n!\n!\n!\n!\nline con 0\n exec-timeout 0 0\n stopbits 1\nline vty 0 4\n\
+      \ exec-timeout 0 0\n privilege level 15\n login local\n transport input ssh\n\
+      !\ncall-home\n ! If contact email address in call-home is configured as sch-smart-licensing@cisco.com\n\
+      \ ! the email address configured in Cisco Smart License Portal will be used\
+      \ as contact email address to send SCH notifications.\n contact-email-addr sch-smart-licensing@cisco.com\n\
+      \ profile \"CiscoTAC-1\"\n  active\n  destination transport-method http\n!\n\
+      !\n!\n!\n!\nend"
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n25
+    image_definition: csr1000v-17-03-06
+    label: ASBR_C2_2_XE
+    node_definition: csr1000v
+    ram: null
+    tags: []
+    x: -80
+    y: 520
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet2
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet3
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet4
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet5
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet6
+        slot: 5
+        type: physical
+      - id: i7
+        label: GigabitEthernet7
+        slot: 6
+        type: physical
+      - id: i8
+        label: GigabitEthernet8
+        slot: 7
+        type: physical
+      - id: i9
+        label: GigabitEthernet9
+        slot: 8
+        type: physical
+      - id: i10
+        label: GigabitEthernet10
+        slot: 9
+        type: physical
+      - id: i11
+        label: GigabitEthernet11
+        slot: 10
+        type: physical
+      - id: i12
+        label: GigabitEthernet12
+        slot: 11
+        type: physical
+      - id: i13
+        label: GigabitEthernet13
+        slot: 12
+        type: physical
+      - id: i14
+        label: GigabitEthernet14
+        slot: 13
+        type: physical
+      - id: i15
+        label: GigabitEthernet15
+        slot: 14
+        type: physical
+      - id: i16
+        label: GigabitEthernet16
+        slot: 15
+        type: physical
+      - id: i17
+        label: GigabitEthernet17
+        slot: 16
+        type: physical
+      - id: i18
+        label: GigabitEthernet18
+        slot: 17
+        type: physical
+      - id: i19
+        label: GigabitEthernet19
+        slot: 18
+        type: physical
+      - id: i20
+        label: GigabitEthernet20
+        slot: 19
+        type: physical
+      - id: i21
+        label: GigabitEthernet21
+        slot: 20
+        type: physical
+      - id: i22
+        label: GigabitEthernet22
+        slot: 21
+        type: physical
+      - id: i23
+        label: GigabitEthernet23
+        slot: 22
+        type: physical
+      - id: i24
+        label: GigabitEthernet24
+        slot: 23
+        type: physical
+      - id: i25
+        label: GigabitEthernet25
+        slot: 24
+        type: physical
+      - id: i26
+        label: GigabitEthernet26
+        slot: 25
+        type: physical
+  - boot_disk_size: null
+    configuration: "Building configuration...\n\nCurrent configuration : 6689 bytes\n\
+      !\n! Last configuration change at 04:59:23 UTC Mon Apr 24 2023\n!\nversion 17.3\n\
+      service timestamps debug datetime msec\nservice timestamps log datetime msec\n\
+      ! Call-home is enabled by Smart-Licensing.\nservice call-home\nplatform qfp\
+      \ utilization monitor load 80\nplatform punt-keepalive disable-kernel-core\n\
+      platform console serial\n!\nhostname ASBR_C2_5_XE\n!\nboot-start-marker\nboot-end-marker\n\
+      !\n!\nvrf definition MGMT\n !\n address-family ipv4\n exit-address-family\n\
+      !\nno logging console\n!\nno aaa new-model\n!\n!\n!\n!\n!\n!\n!\nip domain name\
+      \ cisco.com\n!\n!\n!\nlogin on-success log\n!\n!\n!\n!\n!\n!\n!\nsubscriber\
+      \ templating\n!\n!\n!\n!\n!\n!\nmultilink bundle-name authenticated\n!\n!\n\
+      !\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\ncrypto pki trustpoint SLA-TrustPoint\n\
+      \ enrollment pkcs12\n revocation-check crl\n!\n!\ncrypto pki certificate chain\
+      \ SLA-TrustPoint\n certificate ca 01\n  30820321 30820209 A0030201 02020101\
+      \ 300D0609 2A864886 F70D0101 0B050030\n  32310E30 0C060355 040A1305 43697363\
+      \ 6F312030 1E060355 04031317 43697363\n  6F204C69 63656E73 696E6720 526F6F74\
+      \ 20434130 1E170D31 33303533 30313934\n  3834375A 170D3338 30353330 31393438\
+      \ 34375A30 32310E30 0C060355 040A1305\n  43697363 6F312030 1E060355 04031317\
+      \ 43697363 6F204C69 63656E73 696E6720\n  526F6F74 20434130 82012230 0D06092A\
+      \ 864886F7 0D010101 05000382 010F0030\n  82010A02 82010100 A6BCBD96 131E05F7\
+      \ 145EA72C 2CD686E6 17222EA1 F1EFF64D\n  CBB4C798 212AA147 C655D8D7 9471380D\
+      \ 8711441E 1AAF071A 9CAE6388 8A38E520\n  1C394D78 462EF239 C659F715 B98C0A59\
+      \ 5BBB5CBD 0CFEBEA3 700A8BF7 D8F256EE\n  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96\
+      \ 6FA68957 A2617DE7 104FDC5F EA2956AC\n  7390A3EB 2B5436AD C847A2C5 DAB553EB\
+      \ 69A9A535 58E9F3E3 C0BD23CF 58BD7188\n  68E69491 20F320E7 948E71D7 AE3BCC84\
+      \ F10684C7 4BC8E00F 539BA42B 42C68BB7\n  C7479096 B4CB2D62 EA2F505D C7B062A4\
+      \ 6811D95B E8250FC4 5D5D5FB8 8F27D191\n  C55F0D76 61F9A4CD 3D992327 A8BB03BD\
+      \ 4E6D7069 7CBADF8B DF5F4368 95135E44\n  DFC7C6CF 04DD7FD1 02030100 01A34230\
+      \ 40300E06 03551D0F 0101FF04 04030201\n  06300F06 03551D13 0101FF04 05300301\
+      \ 01FF301D 0603551D 0E041604 1449DC85\n  4B3D31E5 1B3E6A17 606AF333 3D3B4C73\
+      \ E8300D06 092A8648 86F70D01 010B0500\n  03820101 00507F24 D3932A66 86025D9F\
+      \ E838AE5C 6D4DF6B0 49631C78 240DA905\n  604EDCDE FF4FED2B 77FC460E CD636FDB\
+      \ DD44681E 3A5673AB 9093D3B1 6C9E3D8B\n  D98987BF E40CBD9E 1AECA0C2 2189BB5C\
+      \ 8FA85686 CD98B646 5575B146 8DFC66A8\n  467A3DF4 4D565700 6ADF0F0D CF835015\
+      \ 3C04FF7C 21E878AC 11BA9CD2 55A9232C\n  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB\
+      \ E973DE7F 5BDDEB86 C71E3B49 1765308B\n  5FB0DA06 B92AFE7F 494E8A9E 07B85737\
+      \ F3A58BE1 1A48A229 C37C1E69 39F08678\n  80DDCD16 D6BACECA EEBC7CF9 8428787B\
+      \ 35202CDC 60E4616A B623CDBD 230E3AFB\n  418616A9 4093E049 4D10AB75 27E86F73\
+      \ 932E35B5 8862FDAE 0275156F 719BB2F0\n  D697DF7F 28\n  \tquit\n!\nlicense udi\
+      \ pid CSR1000V sn 9N5HA3TVCFJ\ndiagnostic bootup level minimal\nmemory free\
+      \ low-watermark processor 71465\n!\n!\nspanning-tree extend system-id\n!\nusername\
+      \ cisco privilege 15 secret 9 $9$36sCO7FFC4E5iE$azw1Nxcc1uPF/bN8h/a5jzwcw5PZTTqqk064cC7WxzU\n\
+      !\nredundancy\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n\
+      !\n!\n!\n!\n!\ninterface Loopback0\n ip address 10.0.2.5 255.255.255.254\n ip\
+      \ router isis CORE2\n!\ninterface GigabitEthernet1\n ip address 192.168.2.6\
+      \ 255.255.255.254\n ip router isis CORE2\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n isis network point-to-point\n!\ninterface GigabitEthernet2\n\
+      \ ip address 192.168.61.0 255.255.255.254\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet3\n no ip address\n shutdown\n negotiation\
+      \ auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet4\n no ip\
+      \ address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\n\
+      interface GigabitEthernet5\n no ip address\n shutdown\n negotiation auto\n no\
+      \ mop enabled\n no mop sysid\n!\ninterface GigabitEthernet6\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet7\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet8\n no ip address\n shutdown\n negotiation\
+      \ auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet9\n no ip\
+      \ address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\n\
+      interface GigabitEthernet10\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet11\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet12\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet13\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet14\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet15\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet16\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet17\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet18\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet19\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet20\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet21\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet22\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet23\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet24\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet25\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet26\n vrf forwarding\
+      \ MGMT\n ip address 192.168.1.25 255.255.255.0\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\nrouter isis CORE2\n net 49.0002.0002.0000.0005.00\n metric-style\
+      \ wide\n!\nip forward-protocol nd\nno ip http server\nip http secure-server\n\
+      !\nip route vrf MGMT 0.0.0.0 0.0.0.0 GigabitEthernet26 192.168.1.254\nip ssh\
+      \ source-interface GigabitEthernet26\nip ssh version 2\n!\n!\n!\n!\n!\n!\n!\n\
+      control-plane\n!\n!\n!\n!\n!\n!\nline con 0\n exec-timeout 0 0\n stopbits 1\n\
+      line vty 0 4\n exec-timeout 0 0\n privilege level 15\n login local\n transport\
+      \ input ssh\n!\ncall-home\n ! If contact email address in call-home is configured\
+      \ as sch-smart-licensing@cisco.com\n ! the email address configured in Cisco\
+      \ Smart License Portal will be used as contact email address to send SCH notifications.\n\
+      \ contact-email-addr sch-smart-licensing@cisco.com\n profile \"CiscoTAC-1\"\n\
+      \  active\n  destination transport-method http\n!\n!\n!\n!\n!\nend"
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n26
+    image_definition: csr1000v-17-03-06
+    label: ASBR_C2_5_XE
+    node_definition: csr1000v
+    ram: null
+    tags: []
+    x: 240
+    y: 680
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet2
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet3
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet4
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet5
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet6
+        slot: 5
+        type: physical
+      - id: i7
+        label: GigabitEthernet7
+        slot: 6
+        type: physical
+      - id: i8
+        label: GigabitEthernet8
+        slot: 7
+        type: physical
+      - id: i9
+        label: GigabitEthernet9
+        slot: 8
+        type: physical
+      - id: i10
+        label: GigabitEthernet10
+        slot: 9
+        type: physical
+      - id: i11
+        label: GigabitEthernet11
+        slot: 10
+        type: physical
+      - id: i12
+        label: GigabitEthernet12
+        slot: 11
+        type: physical
+      - id: i13
+        label: GigabitEthernet13
+        slot: 12
+        type: physical
+      - id: i14
+        label: GigabitEthernet14
+        slot: 13
+        type: physical
+      - id: i15
+        label: GigabitEthernet15
+        slot: 14
+        type: physical
+      - id: i16
+        label: GigabitEthernet16
+        slot: 15
+        type: physical
+      - id: i17
+        label: GigabitEthernet17
+        slot: 16
+        type: physical
+      - id: i18
+        label: GigabitEthernet18
+        slot: 17
+        type: physical
+      - id: i19
+        label: GigabitEthernet19
+        slot: 18
+        type: physical
+      - id: i20
+        label: GigabitEthernet20
+        slot: 19
+        type: physical
+      - id: i21
+        label: GigabitEthernet21
+        slot: 20
+        type: physical
+      - id: i22
+        label: GigabitEthernet22
+        slot: 21
+        type: physical
+      - id: i23
+        label: GigabitEthernet23
+        slot: 22
+        type: physical
+      - id: i24
+        label: GigabitEthernet24
+        slot: 23
+        type: physical
+      - id: i25
+        label: GigabitEthernet25
+        slot: 24
+        type: physical
+      - id: i26
+        label: GigabitEthernet26
+        slot: 25
+        type: physical
+  - boot_disk_size: null
+    configuration: |2-
+
+      Mon Apr 24 05:00:17.351 UTC
+      Building configuration...
+      !! IOS XR Configuration 6.6.3
+      !! Last configuration change at Mon Apr 24 05:00:15 2023 by cisco
+      !
+      hostname RR_C2_254_XR
+      logging console disable
+      vrf MGMT
+       address-family ipv4 unicast
+       !
+      !
+      line console
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      line default
+       exec-timeout 0 0
+       absolute-timeout 0
+       session-timeout 0
+      !
+      interface Loopback0
+       ipv4 address 10.0.2.254 255.255.255.255
+      !
+      interface MgmtEth0/0/CPU0/0
+       vrf MGMT
+       ipv4 address 192.168.1.26 255.255.255.0
+      !
+      interface GigabitEthernet0/0/0/0
+       ipv4 address 192.168.2.41 255.255.255.254
+      !
+      interface GigabitEthernet0/0/0/1
+       shutdown
+      !
+      interface GigabitEthernet0/0/0/2
+       shutdown
+      !
+      router static
+       vrf MGMT
+        address-family ipv4 unicast
+         0.0.0.0/0 192.168.1.254
+        !
+       !
+      !
+      router isis CORE2
+       net 49.0002.0002.0000.0254.00
+       address-family ipv4 unicast
+        metric-style wide
+       !
+       interface Loopback0
+        passive
+        address-family ipv4 unicast
+        !
+       !
+       interface GigabitEthernet0/0/0/0
+        point-to-point
+        address-family ipv4 unicast
+        !
+       !
+      !
+      ssh server dscp 30
+      ssh server logging
+      ssh server rate-limit 100
+      ssh server capability netconf-xml
+      ssh server rekey-volume 4095
+      ssh server session-limit 100
+      ssh server v2
+      ssh server vrf MGMT
+      end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n27
+    image_definition: XRv 663
+    label: RR_C2_254_XR
+    node_definition: iosxrv
+    ram: null
+    tags: []
+    x: 120
+    y: 440
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: MgmtEth0/0/CPU0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/0/0/0
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/0/0/1
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/0/0/2
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration: "Building configuration...\n\nCurrent configuration : 6693 bytes\n\
+      !\n! Last configuration change at 04:59:29 UTC Mon Apr 24 2023\n!\nversion 17.3\n\
+      service timestamps debug datetime msec\nservice timestamps log datetime msec\n\
+      ! Call-home is enabled by Smart-Licensing.\nservice call-home\nplatform qfp\
+      \ utilization monitor load 80\nplatform punt-keepalive disable-kernel-core\n\
+      platform console serial\n!\nhostname ASBR_M3_2_XE\n!\nboot-start-marker\nboot-end-marker\n\
+      !\n!\nvrf definition MGMT\n !\n address-family ipv4\n exit-address-family\n\
+      !\nno logging console\n!\nno aaa new-model\n!\n!\n!\n!\n!\n!\n!\nip domain name\
+      \ cisco.com\n!\n!\n!\nlogin on-success log\n!\n!\n!\n!\n!\n!\n!\nsubscriber\
+      \ templating\n!\n!\n!\n!\n!\n!\nmultilink bundle-name authenticated\n!\n!\n\
+      !\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\ncrypto pki trustpoint SLA-TrustPoint\n\
+      \ enrollment pkcs12\n revocation-check crl\n!\n!\ncrypto pki certificate chain\
+      \ SLA-TrustPoint\n certificate ca 01\n  30820321 30820209 A0030201 02020101\
+      \ 300D0609 2A864886 F70D0101 0B050030\n  32310E30 0C060355 040A1305 43697363\
+      \ 6F312030 1E060355 04031317 43697363\n  6F204C69 63656E73 696E6720 526F6F74\
+      \ 20434130 1E170D31 33303533 30313934\n  3834375A 170D3338 30353330 31393438\
+      \ 34375A30 32310E30 0C060355 040A1305\n  43697363 6F312030 1E060355 04031317\
+      \ 43697363 6F204C69 63656E73 696E6720\n  526F6F74 20434130 82012230 0D06092A\
+      \ 864886F7 0D010101 05000382 010F0030\n  82010A02 82010100 A6BCBD96 131E05F7\
+      \ 145EA72C 2CD686E6 17222EA1 F1EFF64D\n  CBB4C798 212AA147 C655D8D7 9471380D\
+      \ 8711441E 1AAF071A 9CAE6388 8A38E520\n  1C394D78 462EF239 C659F715 B98C0A59\
+      \ 5BBB5CBD 0CFEBEA3 700A8BF7 D8F256EE\n  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96\
+      \ 6FA68957 A2617DE7 104FDC5F EA2956AC\n  7390A3EB 2B5436AD C847A2C5 DAB553EB\
+      \ 69A9A535 58E9F3E3 C0BD23CF 58BD7188\n  68E69491 20F320E7 948E71D7 AE3BCC84\
+      \ F10684C7 4BC8E00F 539BA42B 42C68BB7\n  C7479096 B4CB2D62 EA2F505D C7B062A4\
+      \ 6811D95B E8250FC4 5D5D5FB8 8F27D191\n  C55F0D76 61F9A4CD 3D992327 A8BB03BD\
+      \ 4E6D7069 7CBADF8B DF5F4368 95135E44\n  DFC7C6CF 04DD7FD1 02030100 01A34230\
+      \ 40300E06 03551D0F 0101FF04 04030201\n  06300F06 03551D13 0101FF04 05300301\
+      \ 01FF301D 0603551D 0E041604 1449DC85\n  4B3D31E5 1B3E6A17 606AF333 3D3B4C73\
+      \ E8300D06 092A8648 86F70D01 010B0500\n  03820101 00507F24 D3932A66 86025D9F\
+      \ E838AE5C 6D4DF6B0 49631C78 240DA905\n  604EDCDE FF4FED2B 77FC460E CD636FDB\
+      \ DD44681E 3A5673AB 9093D3B1 6C9E3D8B\n  D98987BF E40CBD9E 1AECA0C2 2189BB5C\
+      \ 8FA85686 CD98B646 5575B146 8DFC66A8\n  467A3DF4 4D565700 6ADF0F0D CF835015\
+      \ 3C04FF7C 21E878AC 11BA9CD2 55A9232C\n  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB\
+      \ E973DE7F 5BDDEB86 C71E3B49 1765308B\n  5FB0DA06 B92AFE7F 494E8A9E 07B85737\
+      \ F3A58BE1 1A48A229 C37C1E69 39F08678\n  80DDCD16 D6BACECA EEBC7CF9 8428787B\
+      \ 35202CDC 60E4616A B623CDBD 230E3AFB\n  418616A9 4093E049 4D10AB75 27E86F73\
+      \ 932E35B5 8862FDAE 0275156F 719BB2F0\n  D697DF7F 28\n  \tquit\n!\nlicense udi\
+      \ pid CSR1000V sn 9QF9XJGNT3W\ndiagnostic bootup level minimal\nmemory free\
+      \ low-watermark processor 71465\n!\n!\nspanning-tree extend system-id\n!\nusername\
+      \ cisco privilege 15 secret 9 $9$tar1HxOTnO4Mr.$0Cqna7ozb6W5QwgT.LkDaGe9opet1M7Nq4MZXz070N6\n\
+      !\nredundancy\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n\
+      !\n!\n!\n!\n!\ninterface Loopback0\n ip address 10.0.5.2 255.255.255.255\n ip\
+      \ router isis METRO3\n!\ninterface GigabitEthernet1\n ip address 192.168.5.0\
+      \ 255.255.255.254\n ip router isis METRO3\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n isis network point-to-point\n!\ninterface GigabitEthernet2\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet3\n ip address 192.168.60.1 255.255.255.254\n negotiation\
+      \ auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet4\n no ip\
+      \ address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\n\
+      interface GigabitEthernet5\n no ip address\n shutdown\n negotiation auto\n no\
+      \ mop enabled\n no mop sysid\n!\ninterface GigabitEthernet6\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet7\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet8\n no ip address\n shutdown\n negotiation\
+      \ auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet9\n no ip\
+      \ address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\n\
+      interface GigabitEthernet10\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet11\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet12\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet13\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet14\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet15\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet16\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet17\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet18\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet19\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet20\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet21\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet22\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet23\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet24\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet25\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet26\n vrf forwarding\
+      \ MGMT\n ip address 192.168.1.132 255.255.255.0\n negotiation auto\n no mop\
+      \ enabled\n no mop sysid\n!\nrouter isis METRO3\n net 49.0005.0005.0000.0002.00\n\
+      \ metric-style wide\n!\nip forward-protocol nd\nno ip http server\nip http secure-server\n\
+      !\nip route vrf MGMT 0.0.0.0 0.0.0.0 GigabitEthernet26 192.168.1.254\nip ssh\
+      \ source-interface GigabitEthernet26\nip ssh version 2\n!\n!\n!\n!\n!\n!\n!\n\
+      control-plane\n!\n!\n!\n!\n!\n!\nline con 0\n exec-timeout 0 0\n stopbits 1\n\
+      line vty 0 4\n exec-timeout 0 0\n privilege level 15\n login local\n transport\
+      \ input ssh\n!\ncall-home\n ! If contact email address in call-home is configured\
+      \ as sch-smart-licensing@cisco.com\n ! the email address configured in Cisco\
+      \ Smart License Portal will be used as contact email address to send SCH notifications.\n\
+      \ contact-email-addr sch-smart-licensing@cisco.com\n profile \"CiscoTAC-1\"\n\
+      \  active\n  destination transport-method http\n!\n!\n!\n!\n!\nend"
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n28
+    image_definition: csr1000v-17-03-06
+    label: ASBR_M3_2_XE
+    node_definition: csr1000v
+    ram: null
+    tags: []
+    x: 400
+    y: 520
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet2
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet3
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet4
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet5
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet6
+        slot: 5
+        type: physical
+      - id: i7
+        label: GigabitEthernet7
+        slot: 6
+        type: physical
+      - id: i8
+        label: GigabitEthernet8
+        slot: 7
+        type: physical
+      - id: i9
+        label: GigabitEthernet9
+        slot: 8
+        type: physical
+      - id: i10
+        label: GigabitEthernet10
+        slot: 9
+        type: physical
+      - id: i11
+        label: GigabitEthernet11
+        slot: 10
+        type: physical
+      - id: i12
+        label: GigabitEthernet12
+        slot: 11
+        type: physical
+      - id: i13
+        label: GigabitEthernet13
+        slot: 12
+        type: physical
+      - id: i14
+        label: GigabitEthernet14
+        slot: 13
+        type: physical
+      - id: i15
+        label: GigabitEthernet15
+        slot: 14
+        type: physical
+      - id: i16
+        label: GigabitEthernet16
+        slot: 15
+        type: physical
+      - id: i17
+        label: GigabitEthernet17
+        slot: 16
+        type: physical
+      - id: i18
+        label: GigabitEthernet18
+        slot: 17
+        type: physical
+      - id: i19
+        label: GigabitEthernet19
+        slot: 18
+        type: physical
+      - id: i20
+        label: GigabitEthernet20
+        slot: 19
+        type: physical
+      - id: i21
+        label: GigabitEthernet21
+        slot: 20
+        type: physical
+      - id: i22
+        label: GigabitEthernet22
+        slot: 21
+        type: physical
+      - id: i23
+        label: GigabitEthernet23
+        slot: 22
+        type: physical
+      - id: i24
+        label: GigabitEthernet24
+        slot: 23
+        type: physical
+      - id: i25
+        label: GigabitEthernet25
+        slot: 24
+        type: physical
+      - id: i26
+        label: GigabitEthernet26
+        slot: 25
+        type: physical
+  - boot_disk_size: null
+    configuration: "Building configuration...\n\nCurrent configuration : 6705 bytes\n\
+      !\n! Last configuration change at 05:02:26 UTC Mon Apr 24 2023\n!\nversion 17.3\n\
+      service timestamps debug datetime msec\nservice timestamps log datetime msec\n\
+      ! Call-home is enabled by Smart-Licensing.\nservice call-home\nplatform qfp\
+      \ utilization monitor load 80\nplatform punt-keepalive disable-kernel-core\n\
+      platform console serial\n!\nhostname RR_M2_254_XE\n!\nboot-start-marker\nboot-end-marker\n\
+      !\n!\nvrf definition MGMT\n !\n address-family ipv4\n exit-address-family\n\
+      !\nno logging console\n!\nno aaa new-model\n!\n!\n!\n!\n!\n!\n!\nip domain name\
+      \ cisco.com\n!\n!\n!\nlogin on-success log\n!\n!\n!\n!\n!\n!\n!\nsubscriber\
+      \ templating\n!\n!\n!\n!\n!\n!\nmultilink bundle-name authenticated\n!\n!\n\
+      !\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\ncrypto pki trustpoint SLA-TrustPoint\n\
+      \ enrollment pkcs12\n revocation-check crl\n!\n!\ncrypto pki certificate chain\
+      \ SLA-TrustPoint\n certificate ca 01\n  30820321 30820209 A0030201 02020101\
+      \ 300D0609 2A864886 F70D0101 0B050030\n  32310E30 0C060355 040A1305 43697363\
+      \ 6F312030 1E060355 04031317 43697363\n  6F204C69 63656E73 696E6720 526F6F74\
+      \ 20434130 1E170D31 33303533 30313934\n  3834375A 170D3338 30353330 31393438\
+      \ 34375A30 32310E30 0C060355 040A1305\n  43697363 6F312030 1E060355 04031317\
+      \ 43697363 6F204C69 63656E73 696E6720\n  526F6F74 20434130 82012230 0D06092A\
+      \ 864886F7 0D010101 05000382 010F0030\n  82010A02 82010100 A6BCBD96 131E05F7\
+      \ 145EA72C 2CD686E6 17222EA1 F1EFF64D\n  CBB4C798 212AA147 C655D8D7 9471380D\
+      \ 8711441E 1AAF071A 9CAE6388 8A38E520\n  1C394D78 462EF239 C659F715 B98C0A59\
+      \ 5BBB5CBD 0CFEBEA3 700A8BF7 D8F256EE\n  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96\
+      \ 6FA68957 A2617DE7 104FDC5F EA2956AC\n  7390A3EB 2B5436AD C847A2C5 DAB553EB\
+      \ 69A9A535 58E9F3E3 C0BD23CF 58BD7188\n  68E69491 20F320E7 948E71D7 AE3BCC84\
+      \ F10684C7 4BC8E00F 539BA42B 42C68BB7\n  C7479096 B4CB2D62 EA2F505D C7B062A4\
+      \ 6811D95B E8250FC4 5D5D5FB8 8F27D191\n  C55F0D76 61F9A4CD 3D992327 A8BB03BD\
+      \ 4E6D7069 7CBADF8B DF5F4368 95135E44\n  DFC7C6CF 04DD7FD1 02030100 01A34230\
+      \ 40300E06 03551D0F 0101FF04 04030201\n  06300F06 03551D13 0101FF04 05300301\
+      \ 01FF301D 0603551D 0E041604 1449DC85\n  4B3D31E5 1B3E6A17 606AF333 3D3B4C73\
+      \ E8300D06 092A8648 86F70D01 010B0500\n  03820101 00507F24 D3932A66 86025D9F\
+      \ E838AE5C 6D4DF6B0 49631C78 240DA905\n  604EDCDE FF4FED2B 77FC460E CD636FDB\
+      \ DD44681E 3A5673AB 9093D3B1 6C9E3D8B\n  D98987BF E40CBD9E 1AECA0C2 2189BB5C\
+      \ 8FA85686 CD98B646 5575B146 8DFC66A8\n  467A3DF4 4D565700 6ADF0F0D CF835015\
+      \ 3C04FF7C 21E878AC 11BA9CD2 55A9232C\n  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB\
+      \ E973DE7F 5BDDEB86 C71E3B49 1765308B\n  5FB0DA06 B92AFE7F 494E8A9E 07B85737\
+      \ F3A58BE1 1A48A229 C37C1E69 39F08678\n  80DDCD16 D6BACECA EEBC7CF9 8428787B\
+      \ 35202CDC 60E4616A B623CDBD 230E3AFB\n  418616A9 4093E049 4D10AB75 27E86F73\
+      \ 932E35B5 8862FDAE 0275156F 719BB2F0\n  D697DF7F 28\n  \tquit\n!\nlicense udi\
+      \ pid CSR1000V sn 9Z9HP59UZU5\ndiagnostic bootup level minimal\nmemory free\
+      \ low-watermark processor 71465\n!\n!\nspanning-tree extend system-id\n!\nusername\
+      \ cisco privilege 15 secret 9 $9$djnKxUk19kyBRk$lGzaq7gspB04/RPdiYMsiCAY9uWDWwljk3MUc7U9ocU\n\
+      !\nredundancy\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n\
+      !\n!\n!\n!\n!\ninterface Loopback0\n ip address 10.0.4.254 255.255.255.254\n\
+      \ ip ospf 1 area 0\n!\ninterface GigabitEthernet1\n ip address 192.168.4.41\
+      \ 255.255.255.254\n ip ospf network point-to-point\n ip ospf 1 area 0\n negotiation\
+      \ auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet2\n ip address\
+      \ 192.168.4.43 255.255.255.254\n ip ospf network point-to-point\n ip ospf 1\
+      \ area 0\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet3\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet4\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet5\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet6\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet7\n no ip address\n shutdown\n negotiation\
+      \ auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet8\n no ip\
+      \ address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\n\
+      interface GigabitEthernet9\n no ip address\n shutdown\n negotiation auto\n no\
+      \ mop enabled\n no mop sysid\n!\ninterface GigabitEthernet10\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet11\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet12\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet13\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet14\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet15\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet16\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet17\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet18\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet19\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet20\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet21\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet22\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet23\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet24\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet25\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet26\n vrf forwarding MGMT\n ip address 192.168.1.123 255.255.255.0\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\nrouter ospf 1\n router-id\
+      \ 10.0.4.254\n!\nip forward-protocol nd\nno ip http server\nip http secure-server\n\
+      !\nip route vrf MGMT 0.0.0.0 0.0.0.0 GigabitEthernet26 192.168.1.254\nip ssh\
+      \ source-interface GigabitEthernet26\nip ssh version 2\n!\n!\n!\n!\n!\n!\n!\n\
+      control-plane\n!\n!\n!\n!\n!\n!\nline con 0\n exec-timeout 0 0\n stopbits 1\n\
+      line vty 0 4\n exec-timeout 0 0\n privilege level 15\n login local\n transport\
+      \ input ssh\n!\ncall-home\n ! If contact email address in call-home is configured\
+      \ as sch-smart-licensing@cisco.com\n ! the email address configured in Cisco\
+      \ Smart License Portal will be used as contact email address to send SCH notifications.\n\
+      \ contact-email-addr sch-smart-licensing@cisco.com\n profile \"CiscoTAC-1\"\n\
+      \  active\n  destination transport-method http\n!\n!\n!\n!\n!\nend"
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n29
+    image_definition: csr1000v-17-03-06
+    label: RR_M2_254_XE
+    node_definition: csr1000v
+    ram: null
+    tags: []
+    x: 360
+    y: 240
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet2
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet3
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet4
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet5
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet6
+        slot: 5
+        type: physical
+      - id: i7
+        label: GigabitEthernet7
+        slot: 6
+        type: physical
+      - id: i8
+        label: GigabitEthernet8
+        slot: 7
+        type: physical
+      - id: i9
+        label: GigabitEthernet9
+        slot: 8
+        type: physical
+      - id: i10
+        label: GigabitEthernet10
+        slot: 9
+        type: physical
+      - id: i11
+        label: GigabitEthernet11
+        slot: 10
+        type: physical
+      - id: i12
+        label: GigabitEthernet12
+        slot: 11
+        type: physical
+      - id: i13
+        label: GigabitEthernet13
+        slot: 12
+        type: physical
+      - id: i14
+        label: GigabitEthernet14
+        slot: 13
+        type: physical
+      - id: i15
+        label: GigabitEthernet15
+        slot: 14
+        type: physical
+      - id: i16
+        label: GigabitEthernet16
+        slot: 15
+        type: physical
+      - id: i17
+        label: GigabitEthernet17
+        slot: 16
+        type: physical
+      - id: i18
+        label: GigabitEthernet18
+        slot: 17
+        type: physical
+      - id: i19
+        label: GigabitEthernet19
+        slot: 18
+        type: physical
+      - id: i20
+        label: GigabitEthernet20
+        slot: 19
+        type: physical
+      - id: i21
+        label: GigabitEthernet21
+        slot: 20
+        type: physical
+      - id: i22
+        label: GigabitEthernet22
+        slot: 21
+        type: physical
+      - id: i23
+        label: GigabitEthernet23
+        slot: 22
+        type: physical
+      - id: i24
+        label: GigabitEthernet24
+        slot: 23
+        type: physical
+      - id: i25
+        label: GigabitEthernet25
+        slot: 24
+        type: physical
+      - id: i26
+        label: GigabitEthernet26
+        slot: 25
+        type: physical
+  - boot_disk_size: null
+    configuration: "Building configuration...\n\nCurrent configuration : 6729 bytes\n\
+      !\n! Last configuration change at 05:02:33 UTC Mon Apr 24 2023\n!\nversion 17.3\n\
+      service timestamps debug datetime msec\nservice timestamps log datetime msec\n\
+      ! Call-home is enabled by Smart-Licensing.\nservice call-home\nplatform qfp\
+      \ utilization monitor load 80\nplatform punt-keepalive disable-kernel-core\n\
+      platform console serial\n!\nhostname PE_M2_2_XE\n!\nboot-start-marker\nboot-end-marker\n\
+      !\n!\nvrf definition MGMT\n !\n address-family ipv4\n exit-address-family\n\
+      !\nno logging console\n!\nno aaa new-model\n!\n!\n!\n!\n!\n!\n!\nip domain name\
+      \ cisco.com\n!\n!\n!\nlogin on-success log\n!\n!\n!\n!\n!\n!\n!\nsubscriber\
+      \ templating\n!\n!\n!\n!\n!\n!\nmultilink bundle-name authenticated\n!\n!\n\
+      !\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\ncrypto pki trustpoint SLA-TrustPoint\n\
+      \ enrollment pkcs12\n revocation-check crl\n!\n!\ncrypto pki certificate chain\
+      \ SLA-TrustPoint\n certificate ca 01\n  30820321 30820209 A0030201 02020101\
+      \ 300D0609 2A864886 F70D0101 0B050030\n  32310E30 0C060355 040A1305 43697363\
+      \ 6F312030 1E060355 04031317 43697363\n  6F204C69 63656E73 696E6720 526F6F74\
+      \ 20434130 1E170D31 33303533 30313934\n  3834375A 170D3338 30353330 31393438\
+      \ 34375A30 32310E30 0C060355 040A1305\n  43697363 6F312030 1E060355 04031317\
+      \ 43697363 6F204C69 63656E73 696E6720\n  526F6F74 20434130 82012230 0D06092A\
+      \ 864886F7 0D010101 05000382 010F0030\n  82010A02 82010100 A6BCBD96 131E05F7\
+      \ 145EA72C 2CD686E6 17222EA1 F1EFF64D\n  CBB4C798 212AA147 C655D8D7 9471380D\
+      \ 8711441E 1AAF071A 9CAE6388 8A38E520\n  1C394D78 462EF239 C659F715 B98C0A59\
+      \ 5BBB5CBD 0CFEBEA3 700A8BF7 D8F256EE\n  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96\
+      \ 6FA68957 A2617DE7 104FDC5F EA2956AC\n  7390A3EB 2B5436AD C847A2C5 DAB553EB\
+      \ 69A9A535 58E9F3E3 C0BD23CF 58BD7188\n  68E69491 20F320E7 948E71D7 AE3BCC84\
+      \ F10684C7 4BC8E00F 539BA42B 42C68BB7\n  C7479096 B4CB2D62 EA2F505D C7B062A4\
+      \ 6811D95B E8250FC4 5D5D5FB8 8F27D191\n  C55F0D76 61F9A4CD 3D992327 A8BB03BD\
+      \ 4E6D7069 7CBADF8B DF5F4368 95135E44\n  DFC7C6CF 04DD7FD1 02030100 01A34230\
+      \ 40300E06 03551D0F 0101FF04 04030201\n  06300F06 03551D13 0101FF04 05300301\
+      \ 01FF301D 0603551D 0E041604 1449DC85\n  4B3D31E5 1B3E6A17 606AF333 3D3B4C73\
+      \ E8300D06 092A8648 86F70D01 010B0500\n  03820101 00507F24 D3932A66 86025D9F\
+      \ E838AE5C 6D4DF6B0 49631C78 240DA905\n  604EDCDE FF4FED2B 77FC460E CD636FDB\
+      \ DD44681E 3A5673AB 9093D3B1 6C9E3D8B\n  D98987BF E40CBD9E 1AECA0C2 2189BB5C\
+      \ 8FA85686 CD98B646 5575B146 8DFC66A8\n  467A3DF4 4D565700 6ADF0F0D CF835015\
+      \ 3C04FF7C 21E878AC 11BA9CD2 55A9232C\n  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB\
+      \ E973DE7F 5BDDEB86 C71E3B49 1765308B\n  5FB0DA06 B92AFE7F 494E8A9E 07B85737\
+      \ F3A58BE1 1A48A229 C37C1E69 39F08678\n  80DDCD16 D6BACECA EEBC7CF9 8428787B\
+      \ 35202CDC 60E4616A B623CDBD 230E3AFB\n  418616A9 4093E049 4D10AB75 27E86F73\
+      \ 932E35B5 8862FDAE 0275156F 719BB2F0\n  D697DF7F 28\n  \tquit\n!\nlicense udi\
+      \ pid CSR1000V sn 9DJVF1GUMO0\ndiagnostic bootup level minimal\nmemory free\
+      \ low-watermark processor 71465\n!\n!\nspanning-tree extend system-id\n!\nusername\
+      \ cisco privilege 15 secret 9 $9$p1YF4YI5oVpX.E$L1Np.lFThNUS7NAKqf3rUtMHUjhzE27eyKXeEbLYZMk\n\
+      !\nredundancy\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n\
+      !\n!\n!\n!\n!\ninterface Loopback0\n ip address 10.0.4.2 255.255.255.255\n ip\
+      \ ospf network point-to-point\n ip ospf 1 area 0\n!\ninterface GigabitEthernet1\n\
+      \ ip address 192.168.4.5 255.255.255.254\n ip ospf network point-to-point\n\
+      \ ip ospf 1 area 0\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet2\n ip address 192.168.4.7 255.255.255.254\n ip ospf network\
+      \ point-to-point\n ip ospf 1 area 0\n negotiation auto\n no mop enabled\n no\
+      \ mop sysid\n!\ninterface GigabitEthernet3\n no ip address\n shutdown\n negotiation\
+      \ auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet4\n no ip\
+      \ address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\n\
+      interface GigabitEthernet5\n no ip address\n shutdown\n negotiation auto\n no\
+      \ mop enabled\n no mop sysid\n!\ninterface GigabitEthernet6\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet7\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet8\n no ip address\n shutdown\n negotiation\
+      \ auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet9\n no ip\
+      \ address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\n\
+      interface GigabitEthernet10\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet11\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet12\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet13\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet14\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet15\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet16\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet17\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet18\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet19\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet20\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet21\n no ip address\n\
+      \ shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface\
+      \ GigabitEthernet22\n no ip address\n shutdown\n negotiation auto\n no mop enabled\n\
+      \ no mop sysid\n!\ninterface GigabitEthernet23\n no ip address\n shutdown\n\
+      \ negotiation auto\n no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet24\n\
+      \ no ip address\n shutdown\n negotiation auto\n no mop enabled\n no mop sysid\n\
+      !\ninterface GigabitEthernet25\n no ip address\n shutdown\n negotiation auto\n\
+      \ no mop enabled\n no mop sysid\n!\ninterface GigabitEthernet26\n vrf forwarding\
+      \ MGMT\n ip address 192.168.1.122 255.255.255.0\n negotiation auto\n no mop\
+      \ enabled\n no mop sysid\n!\nrouter ospf 1\n router-id 10.0.4.2\n!\nip forward-protocol\
+      \ nd\nno ip http server\nip http secure-server\n!\nip route vrf MGMT 0.0.0.0\
+      \ 0.0.0.0 GigabitEthernet26 192.168.1.254\nip ssh source-interface GigabitEthernet26\n\
+      ip ssh version 2\n!\n!\n!\n!\n!\n!\n!\ncontrol-plane\n!\n!\n!\n!\n!\n!\nline\
+      \ con 0\n exec-timeout 0 0\n stopbits 1\nline vty 0 4\n exec-timeout 0 0\n privilege\
+      \ level 15\n login local\n transport input ssh\n!\ncall-home\n ! If contact\
+      \ email address in call-home is configured as sch-smart-licensing@cisco.com\n\
+      \ ! the email address configured in Cisco Smart License Portal will be used\
+      \ as contact email address to send SCH notifications.\n contact-email-addr sch-smart-licensing@cisco.com\n\
+      \ profile \"CiscoTAC-1\"\n  active\n  destination transport-method http\n!\n\
+      !\n!\n!\n!\nend"
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n30
+    image_definition: csr1000v-17-03-06
+    label: PE_M2_2_XE
+    node_definition: csr1000v
+    ram: null
+    tags: []
+    x: 560
+    y: 320
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet2
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet3
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet4
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet5
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet6
+        slot: 5
+        type: physical
+      - id: i7
+        label: GigabitEthernet7
+        slot: 6
+        type: physical
+      - id: i8
+        label: GigabitEthernet8
+        slot: 7
+        type: physical
+      - id: i9
+        label: GigabitEthernet9
+        slot: 8
+        type: physical
+      - id: i10
+        label: GigabitEthernet10
+        slot: 9
+        type: physical
+      - id: i11
+        label: GigabitEthernet11
+        slot: 10
+        type: physical
+      - id: i12
+        label: GigabitEthernet12
+        slot: 11
+        type: physical
+      - id: i13
+        label: GigabitEthernet13
+        slot: 12
+        type: physical
+      - id: i14
+        label: GigabitEthernet14
+        slot: 13
+        type: physical
+      - id: i15
+        label: GigabitEthernet15
+        slot: 14
+        type: physical
+      - id: i16
+        label: GigabitEthernet16
+        slot: 15
+        type: physical
+      - id: i17
+        label: GigabitEthernet17
+        slot: 16
+        type: physical
+      - id: i18
+        label: GigabitEthernet18
+        slot: 17
+        type: physical
+      - id: i19
+        label: GigabitEthernet19
+        slot: 18
+        type: physical
+      - id: i20
+        label: GigabitEthernet20
+        slot: 19
+        type: physical
+      - id: i21
+        label: GigabitEthernet21
+        slot: 20
+        type: physical
+      - id: i22
+        label: GigabitEthernet22
+        slot: 21
+        type: physical
+      - id: i23
+        label: GigabitEthernet23
+        slot: 22
+        type: physical
+      - id: i24
+        label: GigabitEthernet24
+        slot: 23
+        type: physical
+      - id: i25
+        label: GigabitEthernet25
+        slot: 24
+        type: physical
+      - id: i26
+        label: GigabitEthernet26
+        slot: 25
+        type: physical
+annotations:
+  - border_color: '#808080FF'
+    border_radius: 0
+    border_style: 2,2
+    color: '#FFE851FF'
+    thickness: 1
+    type: rectangle
+    x1: -120.0
+    y1: 400.0
+    x2: 400.0
+    y2: 360.0
+    z_index: 0
+  - border_color: '#808080FF'
+    border_radius: 0
+    border_style: 2,2
+    color: '#FFFFFFFF'
+    thickness: 1
+    type: rectangle
+    x1: 320.0
+    y1: 400.0
+    x2: 400.0
+    y2: 360.0
+    z_index: 0
+  - border_color: '#808080FF'
+    border_radius: 0
+    border_style: 2,2
+    color: '#E2EDFAFF'
+    thickness: 1
+    type: rectangle
+    x1: -640.0
+    y1: 120.0
+    x2: 400.0
+    y2: 640.0
+    z_index: 0
+  - border_color: '#808080FF'
+    border_radius: 0
+    border_style: 2,2
+    color: '#FFE1E1FF'
+    thickness: 1
+    type: rectangle
+    x1: 320.0
+    y1: 400.0
+    x2: 400.0
+    y2: 360.0
+    z_index: 0
+  - border_color: '#808080FF'
+    border_radius: 0
+    border_style: 2,2
+    color: '#D5FFC8FF'
+    thickness: 1
+    type: rectangle
+    x1: -240.0
+    y1: 0.0
+    x2: 480.0
+    y2: 360.0
+    z_index: 0
+  - border_color: '#808080FF'
+    border_radius: 0
+    border_style: 2,2
+    color: '#EEDCCCFF'
+    thickness: 1
+    type: rectangle
+    x1: 240.0
+    y1: 0.0
+    x2: 400.0
+    y2: 360.0
+    z_index: 0
